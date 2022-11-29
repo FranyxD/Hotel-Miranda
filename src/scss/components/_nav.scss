@@ -1,0 +1,79 @@
+@media (max-width: 834px) {
+    header {
+        @include size(100%, 75px);
+        margin: 0 !important;
+        padding: 0 !important;
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        @include shadow(normal);
+
+        .nav {
+            @include size(full);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            //BURGER ICON
+            &_menu {
+                margin-left: 20px;
+                display: inline-flex;
+                gap: 32px;
+
+                &_burger {
+                    //FOR EACH LINE
+                    display: flex;
+                    gap: 4px;
+                    flex-direction: column;
+                    place-content: center;
+                    @for $i from 1 through 3 {
+                        &_line-#{$i} {
+                            @include size(20px, 2px);
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+
+            //HOTEL LOGO
+            &_logo-hotel {
+                display: flex;
+                align-items: center;
+                gap: 13.5px;
+                &_logo {
+                    @include size(36px, 36px);
+                    display: flex;
+                    place-items: center;
+                    place-content: center;
+                    @include shadow(normal);
+                }
+                span {
+                    line-height: 1;
+                    place-items: center;
+                }
+            }
+
+            //ICONS RIGHT
+            &_icons {
+                justify-self: right;
+                margin-right: 23px;
+                display: flex;
+                gap: 28px;
+                img {
+                    @include size(20px, 20px);
+                }
+            }
+        }
+
+        //NAV LIST
+        nav {
+            display: none;
+            ul {
+            }
+        }
+    }
+    main {
+        position: relative;
+        top: 75px;
+    }
+}

@@ -1,0 +1,56 @@
+@media (max-width: 834px) {
+        .home {
+            main > section {padding-left: 5% !important;}
+            main {
+                .welcome {
+                    padding: 75px 0;
+                    h1 {
+                        margin-right: 118px;
+                        margin-bottom: 40px;
+                    }
+                    h2 {
+                        margin-right: 42px;
+                        margin-bottom: 40px;
+                    }
+                    button {
+                        display: block;
+                    }
+                    &_learn-more {
+                        margin-top: 24px;
+                    }
+                    
+                }
+    
+                .check-availability {
+                    padding-top: 36px;
+                    margin-bottom: 60px;
+                    form {
+                        label {
+                            width: 100%;
+                            margin-bottom: 24px;
+                        }
+                        input {
+                            width: 95%;
+                            padding: 14px 0;
+                            margin-bottom: 30px;
+                        }
+                        button {
+                            margin: 12px 0 36px;
+                        }
+                    }
+                }
+                .discover {
+                    span {
+                        display: block;
+                        text-align: left;
+                        margin-bottom: 32px;
+                    }
+                    article {
+    
+                        h2 {margin-bottom: 16px;}
+                        p {margin-bottom: 24px;}
+                    }
+                }
+            }
+        }
+    }
