@@ -1,0 +1,34 @@
+@media (max-width: 834px) {
+    .home {
+        main > section {padding-left: 5% !important;}
+        main {
+            .welcome {
+                background-color: $myGrey;
+                color: white;
+            }
+
+            .check-availability {
+                background: $myBlack;
+                form {
+                    label {
+                        color: white;
+                    }
+                    input {
+                        color: #686868;
+                        background: none;
+                        border-bottom: 2px solid $gold;
+                    }
+                }
+            }
+            .discover {
+                span {
+                    color: #777777;
+                    text-align: left;
+                }
+                article {
+                    
+                }
+            }
+        }
+    }
+}
