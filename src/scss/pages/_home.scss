@@ -1,0 +1,69 @@
+@media (max-width: 834px) {
+    .home {
+        main > section {padding-left: 5% !important;}
+        main {
+            .welcome {
+                background-color: $myGrey;
+                color: white;
+            }
+
+            .check-availability {
+                background: $myBlack;
+                form {
+                    label {
+                        color: white;
+                    }
+                    input {
+                        color: #686868;
+                        background: none;
+                        border-bottom: 2px solid $gold;
+                    }
+                }
+            }
+            .discover {
+                span {
+                    color: #777777;
+                    text-align: left;
+                }
+
+                &_strong-team {
+                    &_info {
+                        &_people-front {
+                            @include size(68px, 50px);
+                            color: red;
+                            fill: red;
+                        }
+                        &_people-behind {
+                            @include size(144px, 106px);
+                        }
+                    }
+                }
+            }
+
+            .rooms-preview {
+               
+                &_card {
+                    background: $myGrey;
+                    color: white;
+                    &_title {
+                        color: white;
+                    }
+                }
+                span {
+                    color: #777777;
+                }
+                &_title2 {
+                    color: black;
+                }
+
+                &_slider {
+                    
+                    &_menu {
+                        background-color: white;
+                    }
+                }
+                
+            }
+        }
+    }
+}
