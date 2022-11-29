@@ -1,0 +1,14 @@
+{
+  "name": "Hotel_Miranda",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Francisco Fuertes Valls",
+  "scripts": {
+    "sass": "sass --watch src/scss/main.scss:src/css/main.css",
+    "ts": "tsc"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3"
+  }
+}

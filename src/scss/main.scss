@@ -1,0 +1,13 @@
+@import "./core/reset";
+@import "./core/typography";
+@import "./core/mixins";
+@import "./core/variables";
+@import "./pages/home";
+
+//COMPONENTS
+@import "./components/nav";
+@import "./components/footer";
+@import "./components/button";
+
+//LAYOUT
+@import "./layout/LHome.scss";
