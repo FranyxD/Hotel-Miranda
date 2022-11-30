@@ -1,0 +1,120 @@
+.about {
+    .about-us {
+        padding: 0 5%;
+        &_first {
+            background-color: $myGrey;
+            color: white;
+            padding-top: 75px;
+            padding-left: 5%;
+            margin-bottom: 60px;
+            h1 {
+                margin-right: 118px;
+                margin-bottom: 40px;
+            }
+            h2 {
+                margin-right: 42px;
+                margin-bottom: 40px;
+            }
+            button {
+                display: block;
+            }
+            &_ha  {
+                width: 100%;
+                display: flex;
+                place-items: end;
+                background-color: white;
+                padding: 30px;
+                color: black;
+            }
+        }
+        &_video {
+            
+            &_play {
+                margin-bottom: 36px;
+            }
+            p {
+                font-family: Old Standard TT;
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: -1.159999966621399px;
+                text-align: center;
+                margin-bottom: 51px;
+
+            }
+        }
+        &_box-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            place-items: center;
+            place-content: center;
+            &_box {
+                @include size(45%, 155px);
+                background-color: $gold;
+                display: flex;
+                align-items: center;
+            place-items: center;
+            place-content: center;
+            }
+            
+        }
+
+    }
+    .restaurant{
+        margin-top: 71px;
+        padding: 0 5%;
+        &_image {
+            margin-bottom: 32px;
+        }
+        span {
+            margin-bottom: 26px;
+        }
+        h2 {
+            margin: 26px 0;
+        }
+        p{
+            margin-bottom: 16px;
+        }
+        button {
+            margin-bottom: 80px;
+        }
+    }
+
+    .facilities {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+        span {
+            margin-bottom: 16px;
+        }
+        h2 {
+            margin-bottom: 32px;
+        }
+        &_slider-cards {
+            padding-left: 10%;
+            h3 {
+                margin-bottom: 38px;
+
+            }
+            p {
+                margin-bottom: 51px;
+                padding-right: 20%;
+                
+            }
+        }
+    }
+    .counter {
+        padding: 0 5%;
+        span {
+            margin-bottom: 24px;
+        }
+        h2 {
+            margin-top: 24px;
+            margin-bottom: 36px;
+        }
+    }
+}

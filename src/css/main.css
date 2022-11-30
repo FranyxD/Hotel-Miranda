@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -758,6 +759,116 @@ small {
     left: 0px;
     top: 50%;
   }
+}
+.about .about-us {
+  padding: 0 5%;
+}
+.about .about-us_first {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding-top: 75px;
+  padding-left: 5%;
+  margin-bottom: 60px;
+}
+.about .about-us_first h1 {
+  margin-right: 118px;
+  margin-bottom: 40px;
+}
+.about .about-us_first h2 {
+  margin-right: 42px;
+  margin-bottom: 40px;
+}
+.about .about-us_first button {
+  display: block;
+}
+.about .about-us_first_ha  {
+  width: 100%;
+  display: flex;
+  place-items: end;
+  background-color: white;
+  padding: 30px;
+  color: black;
+}
+.about .about-us_video_play {
+  margin-bottom: 36px;
+}
+.about .about-us_video p {
+  font-family: Old Standard TT;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -1.1599999666px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+.about .about-us_box-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  place-items: center;
+  place-content: center;
+}
+.about .about-us_box-services_box {
+  width: 45%;
+  height: 155px;
+  background-color: rgb(189, 173, 144);
+  display: flex;
+  align-items: center;
+  place-items: center;
+  place-content: center;
+}
+.about .restaurant {
+  margin-top: 71px;
+  padding: 0 5%;
+}
+.about .restaurant_image {
+  margin-bottom: 32px;
+}
+.about .restaurant span {
+  margin-bottom: 26px;
+}
+.about .restaurant h2 {
+  margin: 26px 0;
+}
+.about .restaurant p {
+  margin-bottom: 16px;
+}
+.about .restaurant button {
+  margin-bottom: 80px;
+}
+.about .facilities {
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.about .facilities span {
+  margin-bottom: 16px;
+}
+.about .facilities h2 {
+  margin-bottom: 32px;
+}
+.about .facilities_slider-cards {
+  padding-left: 10%;
+}
+.about .facilities_slider-cards h3 {
+  margin-bottom: 38px;
+}
+.about .facilities_slider-cards p {
+  margin-bottom: 51px;
+  padding-right: 20%;
+}
+.about .counter {
+  padding: 0 5%;
+}
+.about .counter span {
+  margin-bottom: 24px;
+}
+.about .counter h2 {
+  margin-top: 24px;
+  margin-bottom: 36px;
 }
 
 /*# sourceMappingURL=main.css.map */
