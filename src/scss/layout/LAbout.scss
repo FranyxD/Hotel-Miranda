@@ -1,120 +1,191 @@
-.about {
-    .about-us {
-        padding: 0 5%;
-        &_first {
-            background-color: $myGrey;
-            color: white;
-            padding-top: 75px;
-            padding-left: 5%;
-            margin-bottom: 60px;
-            h1 {
-                margin-right: 118px;
-                margin-bottom: 40px;
+@media (max-width: 834px) {
+    .about {
+        .about-us {
+            padding: 0 5%;
+            &_first {
+                background-color: $myGrey;
+                color: white;
+                padding-top: 75px;
+                padding-left: 5%;
+                margin-bottom: 60px;
+                h1 {
+                    margin-right: 118px;
+                    margin-bottom: 40px;
+                }
+                h2 {
+                    margin-right: 42px;
+                    margin-bottom: 40px;
+                }
+                button {
+                    display: block;
+                }
+                &_ha  {
+                    width: 100%;
+                    display: flex;
+                    place-items: end;
+                    background-color: white;
+                    padding: 30px;
+                    color: black;
+                }
             }
-            h2 {
-                margin-right: 42px;
-                margin-bottom: 40px;
+            &_video {
+                
+                &_play {
+                    margin-bottom: 36px;
+                }
+                p {
+                    font-family: "Old Standard TT";
+                    font-size: 32px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -1.159999966621399px;
+                    text-align: center;
+                    margin-bottom: 51px;
+    
+                }
             }
-            button {
-                display: block;
-            }
-            &_ha  {
-                width: 100%;
+            &_box-services {
                 display: flex;
-                place-items: end;
-                background-color: white;
-                padding: 30px;
-                color: black;
-            }
-        }
-        &_video {
-            
-            &_play {
-                margin-bottom: 36px;
-            }
-            p {
-                font-family: Old Standard TT;
-                font-size: 32px;
-                font-weight: 400;
-                line-height: 40px;
-                letter-spacing: -1.159999966621399px;
-                text-align: center;
-                margin-bottom: 51px;
-
-            }
-        }
-        &_box-services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
-            place-items: center;
-            place-content: center;
-            &_box {
-                @include size(45%, 155px);
-                background-color: $gold;
-                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
                 align-items: center;
-            place-items: center;
-            place-content: center;
-            }
-            
-        }
-
-    }
-    .restaurant{
-        margin-top: 71px;
-        padding: 0 5%;
-        &_image {
-            margin-bottom: 32px;
-        }
-        span {
-            margin-bottom: 26px;
-        }
-        h2 {
-            margin: 26px 0;
-        }
-        p{
-            margin-bottom: 16px;
-        }
-        button {
-            margin-bottom: 80px;
-        }
-    }
-
-    .facilities {
-        padding: 0 5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 60px;
-        span {
-            margin-bottom: 16px;
-        }
-        h2 {
-            margin-bottom: 32px;
-        }
-        &_slider-cards {
-            padding-left: 10%;
-            h3 {
-                margin-bottom: 38px;
-
-            }
-            p {
-                margin-bottom: 51px;
-                padding-right: 20%;
+                place-items: center;
+                place-content: center;
+                &_box {
+                    color: black;
+                    @include size(45%, 155px);
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    place-items: center;
+                    place-content: center;
+                    flex-direction: column;
+                    gap: 12px;
+                    cursor: pointer;
+                }
+                &_box:hover{
+                    background-color: $gold;
+                    color: white;
+                }
                 
             }
+    
+        }
+        .restaurant{
+            margin-top: 71px;
+            padding: 0 5%;
+            &__image {
+                margin-bottom: 32px;
+                width: 100%;
+            }
+            span {
+                margin-bottom: 26px;
+            }
+            h2 {
+                margin: 26px 0;
+            }
+            p{
+                margin-bottom: 16px;
+            }
+            button {
+                margin-bottom: 80px;
+            }
+        }
+    
+        .facilities {
+            background-color: $myBlack;
+            color: white;
+            padding: 0 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            place-content: center;
+            place-items: center;
+            margin-bottom: 60px;
+            padding-top: 48px;
+            span {
+                margin-bottom: 16px;
+            }
+            h2 {
+                margin-bottom: 32px;
+            }
+            &__slider-cards {
+                padding: 0px !important;
+                margin: 0px;
+                padding-left: 10%;
+                margin-bottom: 42px;
+                &__contain {
+                    padding: 18px;
+                    background-color: $myGrey;
+                    margin-bottom: 24px;
+                    img {
+                        margin-bottom: 38px;
+                    }
+                    h3 {
+                        padding-top: 38px;
+                        margin-bottom: 38px;
+                    }
+                    p {
+                        margin-bottom: 51px;
+                        padding-right: 20%;   
+                    }
+                }
+                &__positions {
+                    width: 100%;
+                    display: flex;
+                    place-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    place-content: center;
+                }
+            }
+        }
+        .counter {
+            padding: 0 5%;
+            span {
+                margin-bottom: 24px;
+                color: #777777;
+            }
+            h2 {
+                margin-top: 24px;
+                margin-bottom: 36px;
+            }
+            &__records {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 52px;
+                &__text {
+                    @include flex-direction();
+                    span{
+                        font-family: 'Old Standard TT';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 60px;
+                    line-height: 60px;
+                    letter-spacing: -1.8px;
+                    color: #222222;
+                    }
+                    small {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            &__carousel {
+                margin-bottom: 120px;
+                img {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+                &__controles {
+                    width: 100%;
+                    display: flex;
+                    gap: 7px;
+                    place-content: center;
+                }
+            }
         }
     }
-    .counter {
-        padding: 0 5%;
-        span {
-            margin-bottom: 24px;
-        }
-        h2 {
-            margin-top: 24px;
-            margin-bottom: 36px;
-        }
-    }
+    
 }
