@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Hotel Miranda | contact</title>
 </head>
+
 <body>
-    
+
     <header>
         <div class="nav">
 
@@ -67,16 +69,16 @@
         <section class="contact-info">
             <div class="contact-list contact-info__card">
                 <img src="./assets/svg/mailNoti.svg" alt="mail notification">
-                <div class="right contact__card__right">
-                    <span>Hotel Address</span>
+                <div class="contact-info__card__right">
+                    <h4>Hotel Adress</h4>
                     <Address>19/A, Cirikon City hall Tower New York, NYC</Address>
                 </div>
                 <img class="contact-info__card__back" src="./assets/svg/01.svg" alt="01">
             </div>
             <div class="contact-list contact-info__card">
                 <img src="./assets/svg/tel-rinning.svg" alt="phone rinning">
-                <div class="right contact__card__right">
-                    <h5>Phone Number</h5>
+                <div class="contact-info__card__right">
+                    <h4>Phone Number</h4>
                     <span>+34 123 456 789</span>
                     <span>+34 123 456 789</span>
                 </div>
@@ -84,8 +86,8 @@
             </div>
             <div class="contact-list contact-info__card">
                 <img src="./assets/svg/location.svg" alt="location" class="left contact_card_left">
-                <div class="right contact__card__right">
-                    <h5>Email</h5>
+                <div class="contact-info__card__right">
+                    <h4>Mail</h4>
                     <span>info@webmail.com</span>
                     <span>jobs.webmail@mail.com</span>
                 </div>
@@ -95,15 +97,33 @@
 
         <!-- FORM -->
         <section class="contact-form">
-            <img src="" alt="">
-            <form action="">lege
-                <label for=""><input type="text" placeholder="Your Full Name"></label>
-                <label for=""><input type="number" placeholder="Add phone number"></label>
-                <label for=""><input type="email">Enter email address</label>
-                <label for=""><input type="text" name="" id="" placeholder="Enter Subject"></label>
-                <label for=""></label>
-                <textarea name="description" id="" cols="30" rows="10" placeholder="Enter message">Icon</textarea>
-                <button type="submit">SEND</button>
+            <form class="contact-form__form" action="">
+                <img class="contact-form__form__portada" src="./assets/img/video.png" alt="">
+                <fieldset>
+                    
+                    
+                    <label for="">
+                        <img src="./assets/svg/profile-form.svg" alt="profile">
+                        <input type="text" placeholder="Your Full Name">
+                    </label>
+                    <label for="">
+                        <img src="./assets/svg/tel-form.svg" alt="tel">
+                        <input type="number" placeholder="Add phone number">
+                    </label>
+                    <label for="">
+                        <img src="./assets/svg/mail-form.svg" alt="mail">
+                        <input type="email" placeholder="Enter email address">
+                    </label>
+                    <label for="">
+                        <img src="./assets/svg/subject-form.svg" alt="subject book">
+                        <input type="text" name="" id="" placeholder="Enter Subject">
+                    </label>
+                    <label class="textarea" for="">
+                        <img src="./assets/svg/message-form.svg" alt="">
+                    <textarea name="description" id="" cols="50" rows="10" placeholder="Enter message"></textarea>
+                    </label>
+                    <button class="button" type="submit">SEND</button>
+                </fieldset>
             </form>
         </section>
 
@@ -179,4 +199,5 @@
     </footer>
 
 </body>
-</html>ml
+
+</html>
