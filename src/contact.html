@@ -9,69 +9,87 @@
 </head>
 <body>
     
+    <header>
+        <div class="nav">
 
+            <div class="nav_menu">
+                <!-- BURGER ICON-->
+                <div class="nav_menu_burger">
+                    <div class="nav_menu_burger_line-1"></div>
+                    <div class="nav_menu_burger_line-2"></div>
+                    <div class="nav_menu_burger_line-3"></div>
+                </div>
+
+                <!-- HOTEL LOGO -->
+                <div class="nav_logo-hotel">
+                    <div class="nav_logo-hotel_logo">
+                        <img src="./assets/svg/H.svg" alt="H">
+                    </div>
+                    <img src="./assets/svg/logo-title.svg" alt="hotel-miranda">
+                </div>
+            </div>
+
+            <!-- ICONS RIGHT -->
+            <div class="nav_icons">
+                <img src="./assets/svg/profile.svg" alt="profile-icon" />
+                <img src="./assets/svg/search.svg" alt="search-icon" />
+            </div>
+
+        </div>
+
+        <!-- NAV LIST -->
+        <nav>
+            <ul>
+                <li>About Us</li>
+                <li>Rooms</li>
+                <li>Offers</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="contact-page">
         <!-- FIRST -->
         <section class="about-us">
-            <h1>THE ULTIMATE LUXURY</h1>
-            <h2>Ultimate Room</h2>
-            <nav class="about-us_ha">
-                <a>Home</a>
-                <span> | </span>
-                <a>Rooms Details</a>
-            </nav>
-
-            <!--video-->
-            <article class="about-us_video">
-                <video src=""></video>
-                <p>Hello. Our hotel has been present for over 20 years. We make the best for all our customers.</p>
+            <article class="first">
+                <h1>THE ULTIMATE LUXURY</h1>
+                <h2>About Us</h2>
+                <div class="about-us_first__ha">
+                    <a>Home</a>
+                    <span> | </span>
+                    <a>Contact</a>
+                </div>
             </article>
-
-            <!--BOX SERVICES-->
-            <div class="about-us_box-services">
-                <div class="box-button about-us_box-services_breakfast">
-                    <img src="" alt="">
-                    <span>BREAKFAST</span>
-                </div>
-                <div class="box-button about-us_box-services_airport">
-                    <img src="" alt="">
-                    <span>AIRPORT PICKUP</span>
-                </div>
-                <div class="box-button about-us_box-services_guide">
-                    <img src="" alt="">
-                    <span>CITY GUIDE</span>
-                </div>
-                <div class="box-button about-us_box-services_room">
-                    <img src="" alt="">
-                    <span>LUXURY ROOM</span>
-                </div>
-            </div>
         </section>
 
-        <section class="contact contact_info">
-            <div class="contact-list contact_phone">
-                <img class="left contact_phone_left">
-                <div class="right contact_phone_right">
+
+
+        <section class="contact-info">
+            <div class="contact-list contact-info__card">
+                <img src="./assets/svg/mailNoti.svg" alt="mail notification">
+                <div class="right contact__card__right">
                     <span>Hotel Address</span>
                     <Address>19/A, Cirikon City hall Tower New York, NYC</Address>
                 </div>
+                <img class="contact-info__card__back" src="./assets/svg/01.svg" alt="01">
             </div>
-            <div class="contact-list contact_mail">
-                <img class="left contact_mail_left">
-                <div class="right contact_phone_mail">
+            <div class="contact-list contact-info__card">
+                <img src="./assets/svg/tel-rinning.svg" alt="phone rinning">
+                <div class="right contact__card__right">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                     <span>+34 123 456 789</span>
                 </div>
+                <img class="contact-info__card__back" src="./assets/svg/02.svg" alt="02">
             </div>
-            <div class="contact-list contact_location">
-                <img src="" alt="" class="left contact_location_left">
-                <div class="right contact_phone_right">
+            <div class="contact-list contact-info__card">
+                <img src="./assets/svg/location.svg" alt="location" class="left contact_card_left">
+                <div class="right contact__card__right">
                     <h5>Email</h5>
                     <span>info@webmail.com</span>
                     <span>jobs.webmail@mail.com</span>
                 </div>
+                <img class="contact-info__card__back" src="./assets/svg/03.svg" alt="03">
             </div>
         </section>
 
@@ -91,7 +109,74 @@
 
     </main>
 
+    <footer>
+        <!--LOGO H-->
+        <div class="logo">
+            <div class="logo__contain">
+                <span>H</span>
+            </div>
+            <img src="./assets/svg/logo-title.svg" class="img">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+        <div class="social-media">
+            <img src="assets/svg/facebook.svg" alt="facebook">
+            <img src="./assets/svg/twitter.svg" alt="twitter">
+            <img src="./assets/svg/Be.svg" alt="Be">
+            <img src="./assets/svg/linkedin.svg" alt="linkedin">
+            <img src="./assets/svg/youtube.svg" alt="youtube">
+        </div>
 
+        <!--FOOTER SERVICES-->
+        <section class="list">
+            <h4>Services</h4>
+            <ul class="list__ul">
+                <li>+ Resturent & Bar</li>
+                <li>+ Swimming Pool</li>
+                <li>+ Wellness & Spa</li>
+                <li>+ Restaurant</li>
+                <li>+ Conference Room</li>
+                <li>+ Coctail Party House</li>
+                <li>+ Gaming Zone</li>
+                <li>+ Marriage Party</li>
+                <li>+ Party Planning</li>
+                <li>+ Tour Consultancy</li>
+            </ul>
+        </section>
+
+        <!--Contact US-->
+        <section class="contact">
+            <h4>Contact Us</h4>
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+                <div class="contact__card__text">
+                    <h5>Phone Number</h5>
+                    <span>+34 123 456 789</span>
+                </div>
+            </div>
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+                <div class="contact__card__text">
+                    <h5>Phone Number</h5>
+                    <span>+34 123 456 789</span>
+                </div>
+            </div>
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+                <div class="contact__card__text">
+                    <h5>Phone Number</h5>
+                    <span>+34 123 456 789</span>
+                </div>
+            </div>
+        </section>
+
+        <!--POLITICS AND RULES-->
+        <section class="normatives">
+            <a>Copyright By@Example - 2020</a>
+            <a>Terms of use<span> | </span></a>
+            <a>Privacy Enviromental Policy</a>
+        </section>
+    </footer>
 
 </body>
 </html>ml

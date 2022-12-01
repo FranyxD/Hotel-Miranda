@@ -12,3 +12,18 @@
     min-width: 217px;
     padding: 20px 5%;
 }
+
+@mixin button($color:$gold){
+    @if $color == black {
+        background: $color;
+        color: white;
+        min-width: 217px;
+        padding: 20px 5%;
+    }@else {
+        background: $color;
+        color: white;
+        min-width: 217px;
+        padding: 20px 5%;
+    }
+    
+}
