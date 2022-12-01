@@ -1,15 +1,15 @@
 .button {
     background: $gold;
     color: white;
-    min-width: 217px;
     padding: 20px 5%;
+    text-align: center !important;
 }
 .button-dark {
+    text-align: center !important;
     background: $myBlack;
     color: white;
     outline: 2px solid rgba(255, 255, 255, 0.33);
     outline-offset: -2px;
-    min-width: 217px;
     padding: 20px 5%;
 }
 
