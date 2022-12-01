@@ -1,0 +1,26 @@
+.first {
+    background-color: $myGrey;
+    color: white;
+    padding-top: 75px;
+    padding: 0 5%;
+    margin-bottom: 60px;
+    h1 {
+        margin-right: 118px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        margin-right: 42px;
+        margin-bottom: 40px;
+    }
+    button {
+        display: block;
+    }
+    &__ha  {
+        width: 100%;
+        display: flex;
+        place-items: end;
+        background-color: white;
+        padding: 30px;
+        color: black;
+    }
+}

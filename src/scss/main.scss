@@ -8,9 +8,14 @@
 @import "./components/nav";
 @import "./components/footer";
 @import "./components/button";
+@import "./components/preinfo-room";
+@import "./components/first";
+@import "./components/amentities";
 
 //LAYOUT
 @import "./layout/LHome.scss";
 @import "./layout/LAbout.scss";
 @import "./layout/LRooms.scss";
-@import "./layout/LRoom-Details.scss"
+@import "./layout/LRoom-Details.scss";
+@import "./layout/Loffers";
+@import "layout/Lcontact";
