@@ -678,7 +678,7 @@ small {
 
 @media (max-width: 834px) {
   .home main > section {
-    padding-left: 5% !important;
+    padding: 0 5% !important;
   }
   .home main .welcome {
     padding: 75px 0;
@@ -735,7 +735,6 @@ small {
     margin-bottom: 24px;
   }
   .home main .discover_strong-team {
-    margin: 0 10% 0 5%;
     display: flex;
     flex-direction: column;
   }
@@ -773,7 +772,6 @@ small {
     margin-bottom: 38px;
   }
   .home main .rooms-preview {
-    margin: 0 10% 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -818,6 +816,7 @@ small {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
   .home main .rooms-preview_slider_menu {
     padding: 15px 26px;
@@ -856,6 +855,182 @@ small {
     position: absolute;
     left: 0px;
     top: 50%;
+  }
+  .home main .rooms-preview__info {
+    text-align: center;
+    margin-bottom: 49px;
+  }
+  .home main .rooms-preview__info h3 {
+    margin-bottom: 12px;
+  }
+  .home main .rooms-preview__info p {
+    margin-bottom: 16px;
+  }
+  .home main .rooms-preview__info span {
+    margin-bottom: 42px;
+    color: rgb(189, 173, 144);
+    font-size: 32px;
+  }
+  .home main .rooms-preview__info span small {
+    font-size: 12px;
+  }
+  .home main .intro-video {
+    padding-top: 64px !important;
+    background-color: rgb(51, 51, 51);
+    color: white;
+  }
+  .home main .intro-video span {
+    color: rgb(189, 173, 144);
+    padding-top: 64px;
+  }
+  .home main .intro-video article h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  .home main .intro-video article p {
+    margin-bottom: 32px;
+  }
+  .home main .intro-video article iframe {
+    width: 100%;
+    height: 270px;
+    margin-bottom: 36px;
+  }
+  .home main .intro-video article button {
+    margin-bottom: 48px;
+  }
+  .home main .facilities {
+    position: relative;
+    padding-top: 60px !important;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+  }
+  .home main .facilities span {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 24px !important;
+  }
+  .home main .facilities h3 {
+    margin-top: 24px !important;
+    text-align: center;
+  }
+  .home main .facilities__slider-cards img {
+    margin-top: 133px;
+    margin-bottom: 38px;
+  }
+  .home main .facilities__slider-cards h3 {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .home main .facilities__slider-cards__positions {
+    margin-top: 32px;
+    display: inline-flex;
+    place-content: center;
+    gap: 7px;
+    margin-bottom: 179px;
+  }
+  .home main .facilities__slider-cards__dona {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+  }
+  .home main .food-menu {
+    margin-top: 24px;
+  }
+  .home main .food-menu span {
+    color: #777777;
+    margin-bottom: 24px;
+  }
+  .home main .food-menu h2 {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .home main .food-menu__slide {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .home main .food-menu__slide__card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .home main .food-menu__slide__card__image {
+    width: 120px;
+    height: 120px;
+  }
+  .home main .food-menu__slide__controls {
+    margin-top: 24px;
+    position: relative;
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: end;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  .home main .food-menu__slide__controls__right {
+    cursor: pointer;
+    border: solid black;
+    border-width: 0 6px 6px 0px;
+    padding: 10px;
+    transform: rotate(135deg);
+    z-index: 8;
+  }
+  .home main .food-menu__slide__controls__left {
+    cursor: pointer;
+    border: solid black;
+    border-width: 0 6px 6px 0px;
+    padding: 10px;
+    transform: rotate(-45deg);
+    z-index: 8;
+  }
+  .home main .food-menu__img-slider {
+    margin-bottom: 60px;
+  }
+  .home main .food-menu__img-slider img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .home main .food-menu__img-slider__position-photo {
+    display: flex;
+    width: 100%;
+    place-content: center;
+    gap: 7px;
+  }
+  .home main .records {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    margin-bottom: 160px;
+  }
+  .home main .records__data {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    padding-top: 48px !important;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .home main .records__data span {
+    margin-top: 16px;
+    font-size: 60px;
+  }
+  .home main .records__data small {
+    color: #777777;
   }
 }
 @media (max-width: 834px) {

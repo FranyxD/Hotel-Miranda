@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Hotel Miranda | Rooms</title>
 </head>
 <body>
 
-    <!-- NAV -->
     <header>
+
+        <div class="nav">
+    
+          <div class="nav_menu">
+            <!-- BURGER ICON-->
+            <div class="nav_menu_burger">
+              <div class="nav_menu_burger_line-1"></div>
+              <div class="nav_menu_burger_line-2"></div>
+              <div class="nav_menu_burger_line-3"></div>
+            </div>
+    
+            <!-- HOTEL LOGO -->
+            <div class="nav_logo-hotel">
+              <div class="nav_logo-hotel_logo">
+                <img src="./assets/svg/H.svg" alt="H">
+              </div>
+              <img src="./assets/svg/logo-title.svg" alt="hotel-miranda">
+            </div>
+          </div>
+    
+          <!-- ICONS RIGHT -->
+          <div class="nav_icons">
+            <img src="./assets/svg/profile.svg" alt="profile-icon" />
+            <img src="./assets/svg/search.svg" alt="search-icon" />
+          </div>
+    
+        </div>
+    
+        <!-- NAV LIST -->
         <nav>
-          <div class="menu"></div>
-          <div class="logo-hotel"></div>
+          <ul>
+            <li>About Us</li>
+            <li>Rooms</li>
+            <li>Offers</li>
+            <li>Contact</li>
+          </ul>
         </nav>
-        <img src="./assets/profile.svg" alt="profile-icon" />
-        <img src="./assets/search.svg" alt="search-icon" />
       </header>
 
       <main class="rooms">
@@ -119,71 +150,75 @@
       </main>
 
       <!--FOOTER-->
-    <footer>
-        <!--LOGO H-->
-        <div class="img"></div>
-        <em>HOTEL
-            Miranda
-        </em>
-        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
-        <div class="social-media">
-            <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+  <footer>
+    <!--LOGO H-->
+    <div class="logo">
+        <div class="logo__contain">
+            <span>H</span>
         </div>
+        <img src="./assets/svg/logo-title.svg" class="img">
+    </div>
+    <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+    <div class="social-media">
+        <img src="assets/svg/facebook.svg" alt="facebook">
+        <img src="./assets/svg/twitter.svg" alt="twitter">
+        <img src="./assets/svg/Be.svg" alt="Be">
+        <img src="./assets/svg/linkedin.svg" alt="linkedin">
+        <img src="./assets/svg/youtube.svg" alt="youtube">
+    </div>
 
-        <!--FOOTER SERVICES-->
-        <section>
-            <h4>Services</h4>
-            <ul>
-                <li><img src="" alt="">Air Conditioner</li>
-                <li><img src="" alt="">Breakfast</li>
-                <li><img src="" alt="">Cleaning</li>
-                <li><img src="" alt="">Grocery</li>
-                <li><img src="" alt="">Shop Near</li>
-                <li><img src="" alt="">24/7 Online Support</li>
-                <li><img src="" alt="">Smart Security</li>
-                <li><img src="" alt="">High Speed WiFi</li>
-                <li><img src="" alt="">Kitchen</li>
-                <li><img src="" alt="">Shower</li>
-                <li><img src="" alt="">Single Bed</li>
-                <li><img src="" alt="">Towels</li>
-                <li><img src="" alt="">Strong Locker</li>
-                <li><img src="" alt="">Expert Team</li>
-            </ul>
-        </section>
+    <!--FOOTER SERVICES-->
+    <section class="list">
+        <h4>Services</h4>
+        <ul class="list__ul">
+            <li>+ Resturent & Bar</li>
+            <li>+ Swimming Pool</li>
+            <li>+ Wellness & Spa</li>
+            <li>+ Restaurant</li>
+            <li>+ Conference Room</li>
+            <li>+ Coctail Party House</li>
+            <li>+ Gaming Zone</li>
+            <li>+ Marriage Party</li>
+            <li>+ Party Planning</li>
+            <li>+ Tour Consultancy</li>
+        </ul>
+    </section>
 
-        <!--Contact US-->
-        <section class="contact">
-            <div class="contact-list contact_phone">
-                <img class="left contact_phone_left">
-                <div class="right contact_phone_right">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
+    <!--Contact US-->
+    <section class="contact">
+        <h4>Contact Us</h4>
+        <div class="contact-list contact__card">
+            <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+            <div class="contact__card__text">
+                <h5>Phone Number</h5>
+                <span>+34 123 456 789</span>
             </div>
-            <div class="contact-list contact_mail">
-                <img class="left contact_mail_left">
-                <div class="right contact_phone_mail">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
+        </div>
+        <div class="contact-list contact__card">
+            <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+            <div class="contact__card__text">
+                <h5>Phone Number</h5>
+                <span>+34 123 456 789</span>
             </div>
-            <div class="contact-list contact_location">
-                <img src="" alt="" class="left contact_location_left">
-                <div class="right contact_phone_right">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
+        </div>
+        <div class="contact-list contact__card">
+            <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+            <div class="contact__card__text">
+                <h5>Phone Number</h5>
+                <span>+34 123 456 789</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--POLITICS AND RULES-->
-        <section class="normatives">
-            <a>Copyright By@Example - 2020</a>
-            <a>Terms of use</span><span> | </a>
-            <a>Privacy Enviromental Policy</a>
-        </section>
-    </footer>
+    <!--POLITICS AND RULES-->
+    <section class="normatives">
+        <a>Copyright By@Example - 2020</a>
+        <a>Terms of use<span>   |   </span></a>
+        <a>Privacy Enviromental Policy</a>
+    </section>
+</footer>
+
     
 </body>
 </html>

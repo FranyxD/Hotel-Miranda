@@ -14,7 +14,7 @@
     }
 }
 
-@mixin arrow($type, $color : black){
+@mixin arrow($type, $color){
     @if $type == left {
         cursor: pointer;
         border: solid $color;
