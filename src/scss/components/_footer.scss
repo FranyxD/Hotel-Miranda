@@ -1,3 +1,94 @@
 @media (max-width: 834px) {
-    
+    footer {
+        padding: 0 22px;
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            place-items: center;
+            margin-bottom: 47px;
+            &__contain {
+                
+                @include size(80px, 80px);
+                padding: 10px;
+                background-color: $gold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-family: 'Archivo';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 43px;
+                    color: #FFFFFF;
+                }
+            }
+            img {
+                @include size(137px, 56px);
+                margin-left: 28px;
+            }
+        }
+        p{color: #777777; margin-bottom: 40px;}
+        .social-media {
+            width: 100%;
+            display: inline-flex;
+            gap: 26px;
+            place-content: start;
+            margin-bottom: 40px;
+        }
+        .list {
+            margin-bottom: 32px;
+            h4 {
+                margin-bottom: 24px;
+            }
+            
+            &__ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-height: 288px;
+                gap: 20px;
+                color: #777777;
+                font-size: 16px;
+            }
+        }
+        .contact {
+
+            h4 {
+                margin-bottom: 34px;
+            }
+            &__card {
+                display: flex;
+                margin-bottom: 50px;
+                gap: 20px;
+                &__text {
+                    @include flex-column();
+                    place-items: start;
+                    h5 {
+                        font-family: "Old Standard TT";
+                    }
+                    span {
+                        color: #777777;
+                        letter-spacing: 0.1;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .normatives {
+            display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                margin-bottom: 16px;
+            a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: -0.48px;
+                color: #222222;
+            }
+        }
+    }
 }

@@ -1,18 +1,1053 @@
-/* Error: Undefined mixin.
- *     ,
- * 159 |                     @include flex-direction();
- *     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
- *     '
- *   src\scss\layout\LAbout.scss 159:21  @import
- *   src\scss\main.scss 14:9             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a     \2577 \a 159 \2502                      @include flex-direction();\d\a     \2502                      ^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   src\\scss\\layout\\LAbout.scss 159:21  @import\a   src\\scss\\main.scss 14:9             root stylesheet";
+@charset "UTF-8";
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Old+Standard+TT&family=Roboto:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: theme("borderColor.DEFAULT", currentColor); /* 2 */
 }
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+*/
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: theme("fontFamily.sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"); /* 4 */
+  font-feature-settings: theme("fontFamily.sans[1].fontFeatureSettings", normal); /* 5 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: theme("fontFamily.mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace); /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: theme("colors.gray.400", #9ca3af); /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+button,
+[role=button] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+/*
+font-family: 'Archivo', sans-serif;
+font-family: 'Old Standard TT', serif;
+font-family: 'Roboto', sans-serif;
+*/
+h1 {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  /* or 138% */
+  letter-spacing: 2.8px;
+}
+
+h2 {
+  font-family: "Old Standard TT", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 60px;
+  /* or 107% */
+  letter-spacing: -1.2px;
+}
+
+h3 {
+  font-family: "Old Standard TT", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  /* identical to box height, or 100% */
+  letter-spacing: -0.9px;
+}
+
+h4 {
+  font-family: "Old Standard TT", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+  letter-spacing: -0.72px;
+}
+
+button {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+}
+
+span {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 138% */
+  text-align: center;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+small {
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0px;
+}
+
+@media (max-width: 834px) {
+  .home main > section {
+    padding-left: 5% !important;
+  }
+  .home main .welcome {
+    background-color: rgb(51, 51, 51);
+    color: white;
+  }
+  .home main .check-availability {
+    background: rgb(34, 34, 34);
+  }
+  .home main .check-availability form label {
+    color: white;
+  }
+  .home main .check-availability form input {
+    color: #686868;
+    background: none;
+    border-bottom: 2px solid rgb(189, 173, 144);
+  }
+  .home main .discover span {
+    color: #777777;
+    text-align: left;
+  }
+  .home main .discover_strong-team_info_people-front {
+    width: 68px;
+    height: 50px;
+    color: red;
+    fill: red;
+  }
+  .home main .discover_strong-team_info_people-behind {
+    width: 144px;
+    height: 106px;
+  }
+  .home main .rooms-preview_card {
+    background: rgb(51, 51, 51);
+    color: white;
+  }
+  .home main .rooms-preview_card_title {
+    color: white;
+  }
+  .home main .rooms-preview span {
+    color: #777777;
+  }
+  .home main .rooms-preview_title2 {
+    color: black;
+  }
+  .home main .rooms-preview_slider_menu {
+    background-color: white;
+  }
+}
+@media (max-width: 834px) {
+  header {
+    width: 100%;
+    height: 75px;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav {
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .nav_menu {
+    margin-left: 20px;
+    display: inline-flex;
+    gap: 32px;
+  }
+  header .nav_menu_burger {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    place-content: center;
+  }
+  header .nav_menu_burger_line-1 {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+  }
+  header .nav_menu_burger_line-2 {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+  }
+  header .nav_menu_burger_line-3 {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+  }
+  header .nav_logo-hotel {
+    display: flex;
+    align-items: center;
+    gap: 13.5px;
+  }
+  header .nav_logo-hotel_logo {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav_logo-hotel span {
+    line-height: 1;
+    place-items: center;
+  }
+  header .nav_icons {
+    justify-self: right;
+    margin-right: 23px;
+    display: flex;
+    gap: 28px;
+  }
+  header .nav_icons img {
+    width: 20px;
+    height: 20px;
+  }
+  header nav {
+    display: none;
+  }
+  main {
+    position: relative;
+    top: 75px;
+  }
+}
+@media (max-width: 834px) {
+  footer {
+    padding: 0 22px;
+  }
+  footer .logo {
+    display: inline-flex;
+    align-items: center;
+    place-items: center;
+    margin-bottom: 47px;
+  }
+  footer .logo__contain {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    background-color: rgb(189, 173, 144);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .logo__contain span {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 43px;
+    color: #FFFFFF;
+  }
+  footer .logo img {
+    width: 137px;
+    height: 56px;
+    margin-left: 28px;
+  }
+  footer p {
+    color: #777777;
+    margin-bottom: 40px;
+  }
+  footer .social-media {
+    width: 100%;
+    display: inline-flex;
+    gap: 26px;
+    place-content: start;
+    margin-bottom: 40px;
+  }
+  footer .list {
+    margin-bottom: 32px;
+  }
+  footer .list h4 {
+    margin-bottom: 24px;
+  }
+  footer .list__ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 288px;
+    gap: 20px;
+    color: #777777;
+    font-size: 16px;
+  }
+  footer .contact h4 {
+    margin-bottom: 34px;
+  }
+  footer .contact__card {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+  footer .contact__card__text {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    place-items: start;
+  }
+  footer .contact__card__text h5 {
+    font-family: "Old Standard TT";
+  }
+  footer .contact__card__text span {
+    color: #777777;
+    letter-spacing: 0.1;
+    font-weight: 400;
+  }
+  footer .normatives {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  footer .normatives a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.48px;
+    color: #222222;
+  }
+}
+.button {
+  background: rgb(189, 173, 144);
+  color: white;
+  min-width: 217px;
+  padding: 20px 5%;
+}
+
+.button-dark {
+  background: rgb(34, 34, 34);
+  color: white;
+  outline: 2px solid rgba(255, 255, 255, 0.33);
+  outline-offset: -2px;
+  min-width: 217px;
+  padding: 20px 5%;
+}
+
+@media (max-width: 834px) {
+  .home main > section {
+    padding-left: 5% !important;
+  }
+  .home main .welcome {
+    padding: 75px 0;
+  }
+  .home main .welcome h1 {
+    margin-right: 118px;
+    margin-bottom: 40px;
+  }
+  .home main .welcome h2 {
+    margin-right: 42px;
+    margin-bottom: 40px;
+  }
+  .home main .welcome button {
+    display: block;
+  }
+  .home main .welcome_learn-more {
+    margin-top: 24px;
+  }
+  .home main .check-availability {
+    padding-top: 36px;
+    margin-bottom: 60px;
+  }
+  .home main .check-availability form label {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .home main .check-availability form input {
+    width: 95%;
+    padding: 14px 0;
+    margin-bottom: 30px;
+  }
+  .home main .check-availability form button {
+    margin: 12px 0 36px;
+  }
+  .home main .discover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+  .home main .discover span {
+    align-self: flex-start;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .home main .discover_discover-our {
+    margin-bottom: 60px;
+  }
+  .home main .discover_discover-our h2 {
+    margin-bottom: 16px;
+  }
+  .home main .discover_discover-our p {
+    margin-bottom: 24px;
+  }
+  .home main .discover_strong-team {
+    margin: 0 10% 0 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .home main .discover_strong-team_card {
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  .home main .discover_strong-team_card_people-front {
+    width: 68px;
+    height: 50px;
+    margin: 54px 0 29.5px;
+  }
+  .home main .discover_strong-team_card_people-behind {
+    width: 144px;
+    height: 106px;
+    position: absolute;
+    right: 0px;
+    top: 54px;
+    transform: translateX(-40%);
+    opacity: 0.05;
+  }
+  .home main .discover_strong-team_card h3 {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+  .home main .discover_strong-team_card p {
+    text-align: center;
+    margin-bottom: 38px;
+  }
+  .home main .rooms-preview {
+    margin: 0 10% 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+  .home main .rooms-preview_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .home main .rooms-preview_card_image {
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .home main .rooms-preview_card_calendar {
+    margin: 54px 0px;
+    margin-bottom: 35px;
+  }
+  .home main .rooms-preview_card_title {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+  .home main .rooms-preview_card p {
+    text-align: center;
+    margin: 0px 15%;
+    margin-bottom: 38.33px;
+  }
+  .home main .rooms-preview span {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .home main .rooms-preview_title2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .home main .rooms-preview_slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home main .rooms-preview_slider_menu {
+    padding: 15px 26px;
+    height: 40px;
+    z-index: 2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -5%;
+  }
+  .home main .rooms-preview_slider_menu img {
+    width: 15px;
+    height: 15px;
+  }
+  .home main .rooms-preview_slider_left {
+    cursor: pointer;
+    border: solid black;
+    border-width: 0 6px 6px 0px;
+    padding: 10px;
+    transform: rotate(-45deg);
+    z-index: 8;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+  }
+  .home main .rooms-preview_slider_right {
+    cursor: pointer;
+    border: solid black;
+    border-width: 0 6px 6px 0px;
+    padding: 10px;
+    transform: rotate(135deg);
+    z-index: 8;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+  }
+}
+@media (max-width: 834px) {
+  main.about .about-us {
+    padding: 0 5%;
+  }
+  main.about .about-us__first {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding-top: 75px;
+    padding-left: 5%;
+    margin-bottom: 60px;
+  }
+  main.about .about-us__first h1 {
+    margin-right: 118px;
+    margin-bottom: 40px;
+  }
+  main.about .about-us__first h2 {
+    margin-right: 42px;
+    margin-bottom: 40px;
+  }
+  main.about .about-us__first button {
+    display: block;
+  }
+  main.about .about-us__first__ha  {
+    width: 100%;
+    display: flex;
+    place-items: end;
+    background-color: white;
+    padding: 30px;
+    color: black;
+  }
+  main.about .about-us_video_play {
+    margin-bottom: 36px;
+    width: 100%;
+  }
+  main.about .about-us_video p {
+    font-family: "Old Standard TT";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -1.1599999666px;
+    text-align: center;
+    margin-bottom: 51px;
+  }
+  main.about .about-us_box-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    place-items: center;
+    place-content: center;
+  }
+  main.about .about-us_box-services_box {
+    color: black;
+    width: 45%;
+    height: 155px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    place-items: center;
+    place-content: center;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+  }
+  main.about .about-us_box-services_box:hover {
+    background-color: rgb(189, 173, 144);
+    color: white;
+  }
+  main.about .restaurant {
+    margin-top: 71px;
+    padding: 0 5%;
+  }
+  main.about .restaurant__image {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  main.about .restaurant span {
+    margin-bottom: 26px;
+  }
+  main.about .restaurant h2 {
+    margin: 26px 0;
+  }
+  main.about .restaurant p {
+    margin-bottom: 16px;
+  }
+  main.about .restaurant button {
+    margin-bottom: 80px;
+  }
+  main.about .facilities {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    margin-bottom: 60px;
+    padding-top: 48px;
+  }
+  main.about .facilities span {
+    margin-bottom: 16px;
+  }
+  main.about .facilities h2 {
+    margin-bottom: 32px;
+  }
+  main.about .facilities__slider-cards {
+    padding: 0px !important;
+    margin: 0px;
+    padding-left: 10%;
+    margin-bottom: 42px;
+  }
+  main.about .facilities__slider-cards__contain {
+    padding: 18px;
+    background-color: rgb(51, 51, 51);
+    margin-bottom: 24px;
+  }
+  main.about .facilities__slider-cards__contain img {
+    margin-bottom: 38px;
+  }
+  main.about .facilities__slider-cards__contain h3 {
+    padding-top: 38px;
+    margin-bottom: 38px;
+  }
+  main.about .facilities__slider-cards__contain p {
+    margin-bottom: 51px;
+    padding-right: 20%;
+  }
+  main.about .facilities__slider-cards__positions {
+    width: 100%;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    place-content: center;
+  }
+  main.about .counter {
+    padding: 0 5%;
+  }
+  main.about .counter span {
+    margin-bottom: 24px;
+    color: #777777;
+  }
+  main.about .counter h2 {
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+  main.about .counter__records {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 52px;
+  }
+  main.about .counter__records__text {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+  }
+  main.about .counter__records__text span {
+    font-family: "Old Standard TT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.8px;
+    color: #222222;
+  }
+  main.about .counter__records__text small {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  main.about .counter__records__arrow {
+    cursor: pointer;
+  }
+  main.about .counter__carousel {
+    margin-bottom: 120px;
+  }
+  main.about .counter__carousel img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  main.about .counter__carousel__controles {
+    width: 100%;
+    display: flex;
+    gap: 7px;
+    place-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,8 +1,8 @@
 @media (max-width: 834px) {
-    .about {
+    main.about {
         .about-us {
             padding: 0 5%;
-            &_first {
+            &__first {
                 background-color: $myGrey;
                 color: white;
                 padding-top: 75px;
@@ -19,7 +19,7 @@
                 button {
                     display: block;
                 }
-                &_ha  {
+                &__ha  {
                     width: 100%;
                     display: flex;
                     place-items: end;
@@ -32,6 +32,7 @@
                 
                 &_play {
                     margin-bottom: 36px;
+                    width: 100%;
                 }
                 p {
                     font-family: "Old Standard TT";
@@ -153,10 +154,11 @@
             &__records {
                 display: flex;
                 align-items: center;
+                justify-content: space-around;
                 gap: 20px;
                 margin-bottom: 52px;
                 &__text {
-                    @include flex-direction();
+                    @include flex-column();
                     span{
                         font-family: 'Old Standard TT';
                     font-style: normal;
@@ -170,6 +172,9 @@
                         font-size: 16px;
                         font-weight: 400;
                     }
+                }
+                &__arrow {
+                   cursor: pointer;
                 }
             }
             &__carousel {

@@ -56,10 +56,10 @@
         <!-- FIRST -->
         <section class="about-us">
 
-            <article class="about-us_first">
+            <article class="about-us__first">
                 <h1>THE ULTIMATE LUXURY</h1>
                 <h2>About Us</h2>
-                <div class="about-us_first_ha">
+                <div class="about-us_first__ha">
                     <a>Home</a>
                     <span> | </span>
                     <a>About</a>
@@ -140,7 +140,7 @@
                     <span>8000</span>
                     <small>Happy Users</small>
                 </div>
-                <div class="arrow right counter_records_arrow"></div>
+                <img src="./assets/svg/arrow-right.svg" class="arrow right counter_records__arrow">
             </div>
             <div class="counter__records">
                 <img src="assets/svg/likes.svg" alt="">
@@ -148,7 +148,7 @@
                     <span>100M</span>
                     <small>Reviews & Appriciate</small>
                 </div>
-                <div class="arrow right counter_records_arrow"></div>
+                <img src="./assets/svg/arrow-right.svg" class="arrow right counter_records__arrow">
             </div>
             <div class="counter__records">
                 <img src="./assets/svg/global.svg" alt="">
@@ -156,7 +156,7 @@
                     <span>100</span>
                     <small>Countery Coverage</small>
                 </div>
-                <div class="arrow right counter_records_arrow"></div>
+                <img src="./assets/svg/arrow-right.svg" class="arrow right counter_records__arrow">
             </div>
 
             <!-- CAROUSEL -->
@@ -172,56 +172,59 @@
     <!--FOOTER-->
     <footer>
         <!--LOGO H-->
-        <div class="img"></div>
-        <em>HOTEL
-            Miranda
-        </em>
+        <div class="logo">
+            <div class="logo__contain">
+                <span>H</span>
+            </div>
+            <img src="./assets/svg/logo-title.svg" class="img">
+        </div>
         <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
         <div class="social-media">
-            <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+            <img src="assets/svg/facebook.svg" alt="facebook">
+            <img src="./assets/svg/twitter.svg" alt="twitter">
+            <img src="./assets/svg/Be.svg" alt="Be">
+            <img src="./assets/svg/linkedin.svg" alt="linkedin">
+            <img src="./assets/svg/youtube.svg" alt="youtube">
         </div>
 
         <!--FOOTER SERVICES-->
-        <section>
+        <section class="list">
             <h4>Services</h4>
-            <ul>
-                <li><img src="" alt="">Air Conditioner</li>
-                <li><img src="" alt="">Breakfast</li>
-                <li><img src="" alt="">Cleaning</li>
-                <li><img src="" alt="">Grocery</li>
-                <li><img src="" alt="">Shop Near</li>
-                <li><img src="" alt="">24/7 Online Support</li>
-                <li><img src="" alt="">Smart Security</li>
-                <li><img src="" alt="">High Speed WiFi</li>
-                <li><img src="" alt="">Kitchen</li>
-                <li><img src="" alt="">Shower</li>
-                <li><img src="" alt="">Single Bed</li>
-                <li><img src="" alt="">Towels</li>
-                <li><img src="" alt="">Strong Locker</li>
-                <li><img src="" alt="">Expert Team</li>
+            <ul class="list__ul">
+                <li>+ Resturent & Bar</li>
+                <li>+ Swimming Pool</li>
+                <li>+ Wellness & Spa</li>
+                <li>+ Restaurant</li>
+                <li>+ Conference Room</li>
+                <li>+ Coctail Party House</li>
+                <li>+ Gaming Zone</li>
+                <li>+ Marriage Party</li>
+                <li>+ Party Planning</li>
+                <li>+ Tour Consultancy</li>
             </ul>
         </section>
 
         <!--Contact US-->
         <section class="contact">
-            <div class="contact-list contact_phone">
-                <img class="left contact_phone_left">
-                <div class="right contact_phone_right">
+            <h4>Contact Us</h4>
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
             </div>
-            <div class="contact-list contact_mail">
-                <img class="left contact_mail_left">
-                <div class="right contact_phone_mail">
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
             </div>
-            <div class="contact-list contact_location">
-                <img src="" alt="" class="left contact_location_left">
-                <div class="right contact_phone_right">
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
@@ -231,7 +234,7 @@
         <!--POLITICS AND RULES-->
         <section class="normatives">
             <a>Copyright By@Example - 2020</a>
-            <a>Terms of use</span><span> | </a>
+            <a>Terms of use<span>   |   </span></a>
             <a>Privacy Enviromental Policy</a>
         </section>
     </footer>

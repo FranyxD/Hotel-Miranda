@@ -14,7 +14,7 @@
     }
 }
 
-@mixin arrow($type, $color){
+@mixin arrow($type, $color : black){
     @if $type == left {
         cursor: pointer;
         border: solid $color;
@@ -29,4 +29,12 @@
         padding: 10px;
         transform: rotate(135deg);
     }
+}
+
+@mixin flex-column(){
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
 }
