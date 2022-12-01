@@ -66,7 +66,7 @@
         }
 
         //NAV LIST
-        nav {
+        nav.navegacion {
             display: none;
             ul {
             }
@@ -75,5 +75,90 @@
     main {
         position: relative;
         top: 75px;
+    }
+}
+
+@media(min-width: 834px) {
+    header{
+        display: flex;
+        @include size(100%, 120px);
+        margin: 40px 0 !important;
+        padding: 0 !important;
+        position: fixed;
+        place-items: center;
+        place-content: center;
+        
+        z-index: 10;
+       
+
+        .nav {
+            @include shadow(normal);
+            background-color: white;
+            @include size(80%, 100%);
+            display: flex;
+            
+            align-items: center;
+            justify-content: space-between;
+
+            //BURGER ICON
+            &_menu {
+                margin-left: 20px;
+                display: inline-flex;
+                gap: 32px;
+
+                &_burger, &_burger > * {
+                    //FOR EACH LINE
+                    display: none;
+                }
+            }
+
+            //HOTEL LOGO
+            &_logo-hotel {
+                display: flex;
+                align-items: center;
+                gap: 13.5px;
+                &_logo {
+                    @include size(80px, 80px);
+                    display: flex;
+                    place-items: center;
+                    place-content: center;
+                    @include shadow(normal);
+                    .H {
+                        @include size(31px, 44px);
+                    }
+                }
+                .title {
+                    @include size(137px, 56px);
+                }
+                span {
+                    line-height: 1;
+                    place-items: center;
+                    font-size: 40px;
+                }
+            }
+
+            //ICONS RIGHT
+            &_icons {
+                justify-self: right;
+                margin-right: 23px;
+                display: flex;
+                gap: 28px;
+                
+                img {
+                    border: 1px solid $lightGray;
+                    @include size(30px, 30px);
+                }
+            }
+        }
+        nav.navegacion {
+            
+            ul {
+                display: inline-flex;
+                gap: 30px;
+                li {
+
+                }
+            }
+        }
     }
 }

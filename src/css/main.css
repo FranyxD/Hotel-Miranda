@@ -554,12 +554,83 @@ small {
     width: 20px;
     height: 20px;
   }
-  header nav {
+  header nav.navegacion {
     display: none;
   }
   main {
     position: relative;
     top: 75px;
+  }
+}
+@media (min-width: 834px) {
+  header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin: 40px 0 !important;
+    padding: 0 !important;
+    position: fixed;
+    place-items: center;
+    place-content: center;
+    z-index: 10;
+  }
+  header .nav {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .nav_menu {
+    margin-left: 20px;
+    display: inline-flex;
+    gap: 32px;
+  }
+  header .nav_menu_burger, header .nav_menu_burger > * {
+    display: none;
+  }
+  header .nav_logo-hotel {
+    display: flex;
+    align-items: center;
+    gap: 13.5px;
+  }
+  header .nav_logo-hotel_logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav_logo-hotel_logo .H {
+    width: 31px;
+    height: 44px;
+  }
+  header .nav_logo-hotel .title {
+    width: 137px;
+    height: 56px;
+  }
+  header .nav_logo-hotel span {
+    line-height: 1;
+    place-items: center;
+    font-size: 40px;
+  }
+  header .nav_icons {
+    justify-self: right;
+    margin-right: 23px;
+    display: flex;
+    gap: 28px;
+  }
+  header .nav_icons img {
+    border: 1px solid #777777;
+    width: 30px;
+    height: 30px;
+  }
+  header nav.navegacion ul {
+    display: inline-flex;
+    gap: 30px;
   }
 }
 @media (max-width: 834px) {
@@ -770,7 +841,7 @@ small {
     padding: 0 5% !important;
   }
   .home main .welcome {
-    padding: 75px 0;
+    padding: 75px 5% !important;
   }
   .home main .welcome h1 {
     margin-right: 118px;
@@ -906,6 +977,7 @@ small {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    width: 100%;
   }
   .home main .rooms-preview_slider_menu {
     padding: 15px 26px;
@@ -922,6 +994,9 @@ small {
   .home main .rooms-preview_slider_menu img {
     width: 15px;
     height: 15px;
+  }
+  .home main .rooms-preview_slider_image {
+    width: 100%;
   }
   .home main .rooms-preview_slider_left {
     cursor: pointer;
@@ -1582,7 +1657,6 @@ small {
   }
   main.contact-page .contact-info__card {
     display: flex;
-    align-items: center;
     margin-bottom: 100px;
     position: relative;
     gap: 30px;

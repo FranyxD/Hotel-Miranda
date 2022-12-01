@@ -5,7 +5,7 @@
         }
         main {
             .welcome {
-                padding: 75px 0;
+                padding: 75px 5% !important;
                 h1 {
                     margin-right: 118px;
                     margin-bottom: 40px;
@@ -143,6 +143,7 @@
                     flex-direction: column;
                     align-items: center;
                     margin-bottom: 20px;
+                    width: 100%;
                         &_menu {
                             padding: 15px 26px;
                             height: 40px;
@@ -159,7 +160,7 @@
                         }
 
                         &_image {
-
+                            width: 100%;
                         }
                         &_left {
                             @include arrow(left, black);
