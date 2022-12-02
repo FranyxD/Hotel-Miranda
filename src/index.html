@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="Hotel Miranda" content="Hotel, alquila y reserva habitaciones">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
+
   <title>Hotel Miranda | home</title>
 </head>
 
@@ -33,14 +35,14 @@
       </div>
 
       <!-- NAV LIST -->
-    <nav class="navegacion">
-      <ul>
-        <li>About Us</li>
-        <li>Rooms</li>
-        <li>Offers</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+      <nav class="navegacion">
+        <ul>
+          <li>About Us</li>
+          <li>Rooms</li>
+          <li>Offers</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
 
       <!-- ICONS RIGHT -->
       <div class="nav_icons">
@@ -50,7 +52,7 @@
 
     </div>
 
-    
+
   </header>
 
   <main>
@@ -79,12 +81,12 @@
 
     <!--DISCOVER-->
     <section class="discover">
-      
+
 
       <!--DISCOVER OUR UNDERGROUND-->
       <article class="discover_discover-our">
         <!--LINK TO ABOUT US-->
-      <span>ABOUT US</span>
+        <span>ABOUT US</span>
         <h2>Discover Our Underground.</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -109,7 +111,7 @@
           </p>
         </div>
       </article>
-      
+
       <div class="rooms-preview_card">
         <img class="rooms-preview_card_image" src="./assets/img/test1.png" alt="image">
         <img class="rooms-preview_card_calendar" src="./assets/svg/calendar.svg" alt="calendar-icon">
@@ -144,19 +146,19 @@
       </div>
       <div class="rooms-preview__info">
         <!--INFO ROOM-->
-      <div class="rooms-preview__info__contain">
-        <h3>Minimal Duplex Room</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore.
-      </p>
-      </div>
-      <span>$345
-        <small>/Night</small>
-      </span>
+        <div class="rooms-preview__info__contain">
+          <h3>Minimal Duplex Room</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+          </p>
+        </div>
+        <span>$345
+          <small>/Night</small>
+        </span>
       </div>
 
-      
+
     </section>
 
     <!--INTRO VIDEO-->
@@ -171,7 +173,10 @@
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat you have to understand this.
         </p>
-        <iframe  src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?start=25&end=75" title="Hotel Miranda in Bayahibe Dom. Rep. 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?start=25&end=75"
+          title="Hotel Miranda in Bayahibe Dom. Rep. 4K" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
         <button class="button ">BOOK NOW</button>
       </article>
     </section>
@@ -181,72 +186,154 @@
       <span>FACILITIES</span>
       <h2>Core Features</h2>
 
-
-      <div class="facilities__slider-cards">
-        <img src="./assets/svg/likeFeatures.svg" class="">
-        <h3>Have High Rating</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna..</p>
-      </div>
-
-      <div class="facilities__slider-cards__positions">
-        <input type="radio"><input type="radio"><input type="radio">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="facilities__slider-cards">
+              <img src="./assets/svg/01.svg" alt="01">
+              <img src="./assets/svg/likeFeatures.svg" alt="like features">
+              <h3>Have High Rating</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna..</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
       <img class="facilities__slider-cards__dona" src="./assets/svg/dona.svg" alt="dona">
     </section>
 
     <!--FOOD MENU-->
     <section class="food-menu">
-      
+
       <span>MENU</span>
       <h2>Our Foods Menu</h2>
 
       <!--LIST OF FOODS-->
-      <!--FOOD 1-->
-      <div class="food-menu__slide">
-        <article class="preview-food food-menu__slide__card">
-          <div class="food-menu_slide__card__image">
-            <img src="./assets/img/Rectangle.png" alt="">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!--FOOD 1-->
+            <div class="food-menu__slide">
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+            </div>
+            <!--FOOD 2-->
+            <article class="preview-food food-menu__slide__card">
+              <div class="food-menu_slide__card__image">
+                <img src="./assets/img/Rectangle.png" alt="">
+              </div>
+              <div class="food-menu_slide___card__text">
+                <h4>Tea or Coffe</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+              </div>
+            </article>
+            <!--FOOD 3-->
+            <article class="preview-food food-menu__slide__card">
+              <div class="food-menu_slide__card__image">
+                <img src="./assets/img/Rectangle.png" alt="">
+              </div>
+              <div class="food-menu_slide__card__text">
+                <h4>Chia Oatmeal</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+              </div>
+            </article>
           </div>
-          <div class="food-menu_slide___card__text">
-            <h4>Eggs & Bacon</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+            <div class="swiper-slide">
+              <!--FOOD 1-->
+            <div class="food-menu__slide">
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+            </div>
+            <!--FOOD 2-->
+            <article class="preview-food food-menu__slide__card">
+              <div class="food-menu_slide__card__image">
+                <img src="./assets/img/Rectangle.png" alt="">
+              </div>
+              <div class="food-menu_slide___card__text">
+                <h4>Tea or Coffe</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+              </div>
+            </article>
+            <!--FOOD 3-->
+            <article class="preview-food food-menu__slide__card">
+              <div class="food-menu_slide__card__image">
+                <img src="./assets/img/Rectangle.png" alt="">
+              </div>
+              <div class="food-menu_slide__card__text">
+                <h4>Chia Oatmeal</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+              </div>
+            </article>
+            </div>
           </div>
-        </article>
-
-        <!--FOOD 2-->
-        <article class="preview-food food-menu__slide__card">
-          <div class="food-menu_slide__card__image">
-            <img src="./assets/img/Rectangle.png" alt="">
-          </div>
-          <div class="food-menu_slide___card__text">
-            <h4>Tea or Coffe</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
-          </div>
-        </article>
-
-        <!--FOOD 3-->
-        <article class="preview-food food-menu__slide__card">
-          <div class="food-menu_slide__card__image">
-            <img src="./assets/img/Rectangle.png" alt="">
-          </div>
-          <div class="food-menu_slide__card__text">
-            <h4>Chia Oatmeal</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
-          </div>
-        </article>
-        <div class="food-menu__slide__controls">
-          <div class="food-menu__slide__controls__right"></div>
-          <div class="food-menu__slide__controls__left"></div>
+          <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         </div>
-      </div>
-
-      <div class="food-menu__img-slider">
-        <img src="./assets/img/test1.png" alt="">
-        <div class="food-menu__img-slider__position-photo">
-          <input type="radio"><input type="radio"><input type="radio">
         </div>
-      </div>
     </section>
 
     <!--RECORDS-->
@@ -278,73 +365,94 @@
   <footer>
     <!--LOGO H-->
     <div class="logo">
-        <div class="logo__contain">
-            <span>H</span>
-        </div>
-        <img src="./assets/svg/logo-title.svg" class="img">
+      <div class="logo__contain">
+        <span>H</span>
+      </div>
+      <img src="./assets/svg/logo-title.svg" class="img">
     </div>
     <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
     <div class="social-media">
-        <img src="assets/svg/facebook.svg" alt="facebook">
-        <img src="./assets/svg/twitter.svg" alt="twitter">
-        <img src="./assets/svg/Be.svg" alt="Be">
-        <img src="./assets/svg/linkedin.svg" alt="linkedin">
-        <img src="./assets/svg/youtube.svg" alt="youtube">
+      <img src="assets/svg/facebook.svg" alt="facebook">
+      <img src="./assets/svg/twitter.svg" alt="twitter">
+      <img src="./assets/svg/Be.svg" alt="Be">
+      <img src="./assets/svg/linkedin.svg" alt="linkedin">
+      <img src="./assets/svg/youtube.svg" alt="youtube">
     </div>
 
     <!--FOOTER SERVICES-->
     <section class="list">
-        <h4>Services</h4>
-        <ul class="list__ul">
-            <li>+ Resturent & Bar</li>
-            <li>+ Swimming Pool</li>
-            <li>+ Wellness & Spa</li>
-            <li>+ Restaurant</li>
-            <li>+ Conference Room</li>
-            <li>+ Coctail Party House</li>
-            <li>+ Gaming Zone</li>
-            <li>+ Marriage Party</li>
-            <li>+ Party Planning</li>
-            <li>+ Tour Consultancy</li>
-        </ul>
+      <h4>Services</h4>
+      <ul class="list__ul">
+        <li>+ Resturent & Bar</li>
+        <li>+ Swimming Pool</li>
+        <li>+ Wellness & Spa</li>
+        <li>+ Restaurant</li>
+        <li>+ Conference Room</li>
+        <li>+ Coctail Party House</li>
+        <li>+ Gaming Zone</li>
+        <li>+ Marriage Party</li>
+        <li>+ Party Planning</li>
+        <li>+ Tour Consultancy</li>
+      </ul>
     </section>
 
     <!--Contact US-->
     <section class="contact">
-        <h4>Contact Us</h4>
-        <div class="contact-list contact__card">
-            <img src="./assets/svg/tel.svg" class="left contact_phone_left">
-            <div class="contact__card__text">
-                <h5>Phone Number</h5>
-                <span>+34 123 456 789</span>
-            </div>
+      <h4>Contact Us</h4>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
         </div>
-        <div class="contact-list contact__card">
-            <img src="./assets/svg/mail.svg" class="left contact_mail_left">
-            <div class="contact__card__text">
-                <h5>Phone Number</h5>
-                <span>+34 123 456 789</span>
-            </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
         </div>
-        <div class="contact-list contact__card">
-            <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
-            <div class="contact__card__text">
-                <h5>Phone Number</h5>
-                <span>+34 123 456 789</span>
-            </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
         </div>
+      </div>
     </section>
 
     <!--POLITICS AND RULES-->
     <section class="normatives">
-        <a>Copyright By@Example - 2020</a>
-        <a>Terms of use<span>   |   </span></a>
-        <a>Privacy Enviromental Policy</a>
+      <a>Copyright By@Example - 2020</a>
+      <a>Terms of use<span> | </span></a>
+      <a>Privacy Enviromental Policy</a>
     </section>
-</footer>
+  </footer>
 
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>

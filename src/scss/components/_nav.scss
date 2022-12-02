@@ -92,7 +92,7 @@
        
 
         .nav {
-            @include shadow(normal);
+            @include shadow(large);
             background-color: white;
             @include size(80%, 100%);
             display: flex;

@@ -47,3 +47,53 @@
         }
     }
 }
+
+@media (min-width: 834px) {
+    main.offers {
+
+        .offer {
+            padding: 0 5%;
+           
+            &__photo {
+                position: relative;
+                margin-bottom: 16px;
+                img {
+                    width: 100%;
+                }
+                &__fakePrice {
+                    position: absolute;
+                    right: 5%;
+                    bottom: 20%;
+                    font-size: 23px;
+                    color: $gold !important;
+                }
+                &__truePrice {
+                    color: red !important;
+                    font-size: 30px;
+                    position: absolute;
+                    right: 5%;
+                    bottom: 5%;
+                }
+            }
+            span {
+                color: $lightGray;
+                margin-bottom: 12px;
+            }
+            h2 {
+                margin-top: 12px;
+                margin-bottom: 16px;
+            }
+            p {
+                margin-bottom: 24px;
+            }
+            
+            &__list {
+
+                &__ul {
+                    margin-bottom: 25px;
+                }
+            }
+
+        }
+    }
+}
