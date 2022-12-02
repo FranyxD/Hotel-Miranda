@@ -1,5 +1,4 @@
-@media (max-width: 834px) {
-    .home {
+.home {
         main > section {padding-left: 5% !important;}
         main {
             .welcome {
@@ -25,10 +24,44 @@
                     color: #777777;
                     text-align: left;
                 }
-                article {
-                    
+
+                &_strong-team {
+                    &_info {
+                        &_people-front {
+                            @include size(68px, 50px);
+                            color: red;
+                            fill: red;
+                        }
+                        &_people-behind {
+                            @include size(144px, 106px);
+                        }
+                    }
                 }
+            }
+
+            .rooms-preview {
+               
+                &_card {
+                    background: $myGrey;
+                    color: white;
+                    &_title {
+                        color: white;
+                    }
+                }
+                span {
+                    color: #777777;
+                }
+                &_title2 {
+                    color: black;
+                }
+
+                &_slider {
+                    
+                    &_menu {
+                        background-color: white;
+                    }
+                }
+                
             }
         }
     }
-}

@@ -5,152 +5,175 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/main.css">
     <title>Hotel Miranda | room</title>
 </head>
 
 <body>
-    <!-- NAV -->
     <header>
+
+        <div class="nav">
+
+            <div class="nav_menu">
+                <!-- BURGER ICON-->
+                <div class="nav_menu_burger">
+                    <div class="nav_menu_burger_line-1"></div>
+                    <div class="nav_menu_burger_line-2"></div>
+                    <div class="nav_menu_burger_line-3"></div>
+                </div>
+
+                <!-- HOTEL LOGO -->
+                <div class="nav_logo-hotel">
+                    <div class="nav_logo-hotel_logo">
+                        <img src="./assets/svg/H.svg" alt="H">
+                    </div>
+                    <img src="./assets/svg/logo-title.svg" alt="hotel-miranda">
+                </div>
+            </div>
+
+            <!-- ICONS RIGHT -->
+            <div class="nav_icons">
+                <img src="./assets/svg/profile.svg" alt="profile-icon" />
+                <img src="./assets/svg/search.svg" alt="search-icon" />
+            </div>
+
+        </div>
+
+        <!-- NAV LIST -->
         <nav>
-            <div class="menu"></div>
-            <div class="logo-hotel"></div>
+            <ul>
+                <li>About Us</li>
+                <li>Rooms</li>
+                <li>Offers</li>
+                <li>Contact</li>
+            </ul>
         </nav>
-        <img src="./assets/profile.svg" alt="profile-icon" />
-        <img src="./assets/search.svg" alt="search-icon" />
     </header>
 
 
     <main class="room-details">
         <!-- FIRST -->
-        <section class="about-us">
+        <section class="first">
             <h1>THE ULTIMATE LUXURY</h1>
             <h2>Ultimate Room</h2>
-            <nav class="about-us_ha">
+            <div class="first__ha">
                 <a>Home</a>
                 <span> | </span>
                 <a>Rooms Details</a>
-            </nav>
-
-            <!--video-->
-            <article class="about-us_video">
-                <video src=""></video>
-                <p>Hello. Our hotel has been present for over 20 years. We make the best for all our customers.</p>
-            </article>
-
-            <!--BOX SERVICES-->
-            <div class="about-us_box-services">
-                <div class="box-button about-us_box-services_breakfast">
-                    <img src="" alt="">
-                    <span>BREAKFAST</span>
-                </div>
-                <div class="box-button about-us_box-services_airport">
-                    <img src="" alt="">
-                    <span>AIRPORT PICKUP</span>
-                </div>
-                <div class="box-button about-us_box-services_guide">
-                    <img src="" alt="">
-                    <span>CITY GUIDE</span>
-                </div>
-                <div class="box-button about-us_box-services_room">
-                    <img src="" alt="">
-                    <span>LUXURY ROOM</span>
-                </div>
             </div>
+            </nav>
         </section>
 
         <!-- INFO ROOM -->
         <section class="info-room">
             <span>DOUBLE BED</span>
             <h2>Luxury Double Bed</h2>
-            <span>$345/<small>Night</small></span>
+            <span class="info-room__price">$345/<small>Night</small></span>
 
             <!-- ROOM PHOTO -->
-            <img src="" alt="">
+            <img src="./assets/img/video.png" alt="">
+
+
 
             <!-- AVAILIBILITY -->
-            <span>Check Availability</span>
-
             <form action="">
-                <label for="CheckIn">Check In</label>
-                <input name="checkin" id="checkin" type="date">
-                <label for="CheckOut">Check Out</label>
-                <input type="date" name="checkout" id="checkout">
-                <button type="submit">CHECK AVAILABILIY</button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                    amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                    dolore magnam aliquam quaerat voluptatem.</p>
+                <fieldset>
+                    <legend>Check Availability</legend>
+                    <label for="CheckIn">Check In</label>
+                    <input name="checkin" id="checkin" type="date">
+                    <label for="CheckOut">Check Out</label>
+                    <input type="date" name="checkout" id="checkout">
+                    <button class="button" type="submit">CHECK AVAILABILIY</button>
+
+                </fieldset>
 
             </form>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            </p>
         </section>
 
         <!-- Amentities -->
         <section class="amentities">
-            <hr class="amentities_line">
-            <ul class="list amentities_list">
-                <li><img src="" alt="">Air Conditioner</li>
-                <li><img src="" alt="">Breakfast</li>
-                <li><img src="" alt="">Cleaning</li>
-                <li><img src="" alt="">Grocery</li>
-                <li><img src="" alt="">Shop Near</li>
-                <li><img src="" alt="">24/7 Online Support</li>
-                <li><img src="" alt="">Smart Security</li>
-                <li><img src="" alt="">High Speed WiFi</li>
-                <li><img src="" alt="">Kitchen</li>
-                <li><img src="" alt="">Shower</li>
-                <li><img src="" alt="">Single Bed</li>
-                <li><img src="" alt="">Towels</li>
-                <li><img src="" alt="">Strong Locker</li>
-                <li><img src="" alt="">Expert Team</li>
+            <h3>Amentities</h3>
+            <hr class="amentities__line">
+            <ul class="list amentities__list">
+                <li><img src="./assets/svg/airConditioner.svg" alt="airConditioner">Air Conditioner</li>
+                <li><img src="./assets/svg/breakfast.svg" alt="breakfast">Breakfast</li>
+                <li><img src="./assets/svg/clean.svg" alt="clean">Cleaning</li>
+                <li><img src="./assets/svg/grocery.svg" alt="grocery">Grocery</li>
+                <li><img src="./assets/svg/shop.svg" alt="shop near">Shop Near</li>
+                <li><img src="./assets/svg/support.svg" alt="online support">24/7 Online Support</li>
+                <li><img src="./assets/svg/smart-security.svg" alt="smart security">Smart Security</li>
+                <li><img src="./assets/svg/high-wifi.svg" alt="high speed wifi">High Speed WiFi</li>
+                <li><img src="./assets/svg/kitchen.svg" alt="kitchen">Kitchen</li>
+                <li><img src="./assets/svg/shower.svg" alt="shower">Shower</li>
+                <li><img src="./assets/svg/single-bed.svg" alt="single bed">Single Bed</li>
+                <li><img src="./assets/svg/towels.svg" alt="towels">Towels</li>
+                <li><img src="./assets/svg/strong-locker.svg" alt="strong locker">Strong Locker</li>
+                <li><img src="./assets/svg/expert-team.svg" alt="expert team">Expert Team</li>
             </ul>
         </section>
 
         <!-- FOUNDER -->
         <section class="founder">
-            <div class="founder_photo">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="founder__photo">
+                <img  src="./assets/svg/okay.svg" alt="okay">
+                <img class="founder__photo__her" src="./assets/img/Rectangle.png" alt="founder">
             </div>
-            <h2>Rosalina D. William</h2>
-            <h3>Founder, QUX CO.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore.</p>
+            <h3>Rosalina D. William</h3>
+            <h4>Founder, QUX CO.</h4>
+            <p>Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.</p>
 
         </section>
 
         <!-- CANCELLATION -->
         <section class="cancelation">
+            <h3>Cancellation</h3>
             <hr>
-            <p>Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat
-                metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a
-                full refund.</p>
+            <p>Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.</p>
 
         </section>
 
         <!-- RELATED ROOMS -->
         <section class="related-rooms">
+            <h3>Related Rooms</h3>
             <hr>
-            <div class="rooms-preview_slider">
-                <div class="rooms-preview_slider_menu"></div>
-                <img src="" alt="" />
-                <div class="rooms-preview_slider_controls">
-                    <button class="button arrow-left rooms-preview_slider_controls_left"></button>
-                    <button class="button arrow-right rooms-preview_slider_controls_right"></button>
+            <article class="rooms-list__preinfo">
+                <div>
+                    <img class="rooms-list__preinfo__photo" src="./assets/img/video.png" alt="room">
+                    <div class="related-rooms__preinfo__arrows">
+                        <div class="arrow-left"></div>
+                        <div class="arrow-righ"></div>
+                    </div>
+                <div class="rooms-list__preinfo__menu">
+                
+                
+                    <!-- MENU -->
+                    <img src="./assets/svg/bed.svg" alt="bed">
+                    <img src="./assets/svg/ethernet.svg" alt="ethernet-wifi">
+                    <img src="./assets/svg/drive.svg" alt="drive car">
+                    <img src="./assets/svg/cold.svg" alt="cold">
+                    <img src="./assets/svg/lift.svg" alt="lift gym">
+                    <img src="./assets/svg/nosmoke.svg" alt="no smoke">
+                    <img src="./assets/svg/drink.svg" alt="drink bar">
                 </div>
-            </div>
-            
-            <!-- INFO ROOM -->
-            <h3>Minimal Duplex Room</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</span>
-            <span>$345/Night</span>
-            <a href="">Booking Now</a>
+                </div>
+                <h3>Minimal Duplex Room</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                <span>$345/Night</span>
+                <a href="">Booking Now</a>
+            </article>
         </section>
     </main>
 
@@ -158,56 +181,59 @@
     <!--FOOTER-->
     <footer>
         <!--LOGO H-->
-        <div class="img"></div>
-        <em>HOTEL
-            Miranda
-        </em>
+        <div class="logo">
+            <div class="logo__contain">
+                <span>H</span>
+            </div>
+            <img src="./assets/svg/logo-title.svg" class="img">
+        </div>
         <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
         <div class="social-media">
-            <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+            <img src="assets/svg/facebook.svg" alt="facebook">
+            <img src="./assets/svg/twitter.svg" alt="twitter">
+            <img src="./assets/svg/Be.svg" alt="Be">
+            <img src="./assets/svg/linkedin.svg" alt="linkedin">
+            <img src="./assets/svg/youtube.svg" alt="youtube">
         </div>
 
         <!--FOOTER SERVICES-->
-        <section>
+        <section class="list">
             <h4>Services</h4>
-            <ul>
-                <li><img src="" alt="">Air Conditioner</li>
-                <li><img src="" alt="">Breakfast</li>
-                <li><img src="" alt="">Cleaning</li>
-                <li><img src="" alt="">Grocery</li>
-                <li><img src="" alt="">Shop Near</li>
-                <li><img src="" alt="">24/7 Online Support</li>
-                <li><img src="" alt="">Smart Security</li>
-                <li><img src="" alt="">High Speed WiFi</li>
-                <li><img src="" alt="">Kitchen</li>
-                <li><img src="" alt="">Shower</li>
-                <li><img src="" alt="">Single Bed</li>
-                <li><img src="" alt="">Towels</li>
-                <li><img src="" alt="">Strong Locker</li>
-                <li><img src="" alt="">Expert Team</li>
+            <ul class="list__ul">
+                <li>+ Resturent & Bar</li>
+                <li>+ Swimming Pool</li>
+                <li>+ Wellness & Spa</li>
+                <li>+ Restaurant</li>
+                <li>+ Conference Room</li>
+                <li>+ Coctail Party House</li>
+                <li>+ Gaming Zone</li>
+                <li>+ Marriage Party</li>
+                <li>+ Party Planning</li>
+                <li>+ Tour Consultancy</li>
             </ul>
         </section>
 
         <!--Contact US-->
         <section class="contact">
-            <div class="contact-list contact_phone">
-                <img class="left contact_phone_left">
-                <div class="right contact_phone_right">
+            <h4>Contact Us</h4>
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
             </div>
-            <div class="contact-list contact_mail">
-                <img class="left contact_mail_left">
-                <div class="right contact_phone_mail">
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
             </div>
-            <div class="contact-list contact_location">
-                <img src="" alt="" class="left contact_location_left">
-                <div class="right contact_phone_right">
+            <div class="contact-list contact__card">
+                <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+                <div class="contact__card__text">
                     <h5>Phone Number</h5>
                     <span>+34 123 456 789</span>
                 </div>
@@ -217,7 +243,7 @@
         <!--POLITICS AND RULES-->
         <section class="normatives">
             <a>Copyright By@Example - 2020</a>
-            <a>Terms of use</span><span> | </a>
+            <a>Terms of use<span> | </span></a>
             <a>Privacy Enviromental Policy</a>
         </section>
     </footer>
