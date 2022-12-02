@@ -16,6 +16,7 @@
 
             //BURGER ICON
             &_menu {
+                cursor: pointer;
                 margin-left: 20px;
                 display: inline-flex;
                 gap: 32px;
@@ -56,6 +57,7 @@
             //ICONS RIGHT
             &_icons {
                 justify-self: right;
+                text-align: right;
                 margin-right: 23px;
                 display: flex;
                 gap: 28px;
@@ -65,18 +67,36 @@
             }
         }
 
-        //NAV LIST
-        nav.navegacion {
-            display: none;
-            ul {
-            }
-        }
+       
     }
     main {
         position: relative;
         top: 75px;
     }
 }
+
+ //NAV LIST
+        nav.navegacion {
+            width: 100%;
+            display: none;
+            background-color: white;
+            padding: 16px;
+            ul {
+                display: block;
+                li{
+                    margin: 16px 0;
+                    font-family: 'Archivo';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 17px;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+.activeNav {
+    display: block !important;
+}
+
 
 @media(min-width: 834px) {
     header{
