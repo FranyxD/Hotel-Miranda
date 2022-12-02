@@ -592,7 +592,7 @@ small {
   header {
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 80px;
     margin: 40px 0 !important;
     padding: 0 !important;
     position: fixed;
@@ -623,20 +623,20 @@ small {
     gap: 13.5px;
   }
   header .nav_logo-hotel_logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     place-items: center;
     place-content: center;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   }
   header .nav_logo-hotel_logo .H {
-    width: 31px;
-    height: 44px;
+    width: 20px;
+    height: 24px;
   }
   header .nav_logo-hotel .title {
-    width: 137px;
-    height: 56px;
+    width: 90px;
+    height: 40px;
   }
   header .nav_logo-hotel span {
     line-height: 1;
@@ -657,6 +657,13 @@ small {
   header nav.navegacion ul {
     display: inline-flex;
     gap: 30px;
+  }
+  header nav.navegacion ul li {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
   }
 }
 @media (max-width: 834px) {
@@ -1146,16 +1153,28 @@ small {
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
+    z-index: 5;
+  }
+  .home main .rooms-preview_slider .swiper-pagination {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    top: -15px;
+    z-index: 5 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+    background-color: white;
+    position: absolute;
   }
   .home main .rooms-preview_slider img.iconsMenu {
+    background-color: white;
     width: 15px !important;
     height: 15px !important;
     display: inline-flex;
     margin: 0 10px;
     z-index: 4;
     background: none;
-    position: absolute;
-    top: -5%;
   }
   .home main .rooms-preview_slider_menu {
     padding: 15px 26px;
@@ -1228,6 +1247,9 @@ small {
   .home main .facilities__desktop {
     display: none;
   }
+  .home main .facilities__mobile {
+    margin-bottom: 120px;
+  }
   .home main .facilities span {
     text-align: center;
     color: #777777;
@@ -1237,6 +1259,9 @@ small {
     margin-top: 24px !important;
     text-align: center;
   }
+  .home main .facilities__slider-cards {
+    margin-bottom: 120px;
+  }
   .home main .facilities__slider-cards img {
     margin-top: 133px;
     margin-bottom: 38px;
@@ -1245,14 +1270,7 @@ small {
     margin-bottom: 28px;
     text-align: left;
   }
-  .home main .facilities__slider-cards__positions {
-    margin-top: 32px;
-    display: inline-flex;
-    place-content: center;
-    gap: 7px;
-    margin-bottom: 179px;
-  }
-  .home main .facilities__slider-cards__dona {
+  .home main .facilities__dona {
     position: absolute;
     right: 0%;
     bottom: 0%;
@@ -1620,7 +1638,7 @@ small {
   }
   .home .facilities {
     position: relative;
-    padding: 60px 20% !important;
+    padding: 60px 10% !important;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -1634,12 +1652,20 @@ small {
   }
   .home .facilities__desktop {
     width: 100%;
-    margin: 0 20%;
+    margin: 0 10%;
     display: grid;
     place-content: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    column-gap: 50px;
     margin-bottom: 80px;
+    text-align: center;
+  }
+  .home .facilities__desktop img {
+    align-self: start;
+    justify-self: end;
+    width: 100px;
+    height: 100px;
+    margin: 0;
   }
   .home .facilities span {
     text-align: center;

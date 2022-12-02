@@ -107,7 +107,7 @@
 @media (min-width: 834px) {
   header {
     display: flex;
-    @include size(100%, 100px);
+    @include size(100%, 80px);
     margin: 40px 0 !important;
     padding: 0 !important;
     position: fixed;
@@ -144,17 +144,17 @@
         align-items: center;
         gap: 13.5px;
         &_logo {
-          @include size(80px, 80px);
+          @include size(60px, 60px);
           display: flex;
           place-items: center;
           place-content: center;
           @include shadow(normal);
           .H {
-            @include size(31px, 44px);
+            @include size(20px, 24px);
           }
         }
         .title {
-          @include size(137px, 56px);
+          @include size(90px, 40px);
         }
         span {
           line-height: 1;
@@ -181,6 +181,11 @@
         display: inline-flex;
         gap: 30px;
         li {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 17px;
         }
       }
     }
