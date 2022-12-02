@@ -665,13 +665,6 @@ small {
     font-size: 16px;
     line-height: 17px;
   }
-  header nav.navegacion ul li {
-    font-family: "Archivo";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 17px;
-  }
 }
 @media (max-width: 834px) {
   footer {
@@ -1173,22 +1166,8 @@ small {
     padding: 10px 15px;
     background-color: white;
     position: absolute;
-    z-index: 5;
-  }
-  .home main .rooms-preview_slider .swiper-pagination {
-    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    top: -15px;
-    z-index: 5 !important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    height: fit-content;
-    padding: 10px 15px;
-    background-color: white;
-    position: absolute;
   }
   .home main .rooms-preview_slider img.iconsMenu {
-    background-color: white;
     background-color: white;
     width: 15px !important;
     height: 15px !important;
@@ -1677,16 +1656,8 @@ small {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(3, 1fr);
-    column-column-gap: 50px;
+    column-gap: 50px;
     margin-bottom: 80px;
-    text-align: center;
-  }
-  .home .facilities__desktop img {
-    align-self: start;
-    justify-self: end;
-    width: 100px;
-    height: 100px;
-    margin: 0;
     text-align: center;
   }
   .home .facilities__desktop img {
@@ -1901,6 +1872,9 @@ small {
     margin-bottom: 60px;
     padding-top: 48px;
   }
+  main.about .facilities__desktop {
+    display: none;
+  }
   main.about .facilities span {
     margin-bottom: 16px;
   }
@@ -1993,15 +1967,15 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.about .about-us {
-    padding: 0 5%;
+  main.about .about-us > * {
+    padding: 0 10% !important;
   }
   main.about .about-us__first {
+    border-top: 100px solid rgb(34, 34, 34);
+    padding-top: 178px;
     background-color: rgb(51, 51, 51);
     color: white;
-    padding-top: 75px;
-    padding-left: 5%;
-    margin-bottom: 60px;
+    margin-bottom: 5%;
   }
   main.about .about-us__first h1 {
     margin-right: 118px;
@@ -2022,9 +1996,17 @@ small {
     padding: 30px;
     color: black;
   }
-  main.about .about-us_video_play {
+  main.about .about-us_video {
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+  }
+  main.about .about-us_video__play {
     margin-bottom: 36px;
     width: 100%;
+    width: 100%;
+    height: 400px;
   }
   main.about .about-us_video p {
     font-family: "Old Standard TT";
@@ -2037,7 +2019,6 @@ small {
   }
   main.about .about-us_box-services {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     place-items: center;
@@ -2063,10 +2044,15 @@ small {
   main.about .restaurant {
     margin-top: 71px;
     padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    grid-template-rows: 1fr;
   }
   main.about .restaurant__image {
     margin-bottom: 32px;
     width: 100%;
+    height: 420px;
   }
   main.about .restaurant span {
     margin-bottom: 26px;
@@ -2083,50 +2069,43 @@ small {
   main.about .facilities {
     background-color: rgb(34, 34, 34);
     color: white;
-    padding: 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     place-content: center;
     place-items: center;
     margin-bottom: 60px;
-    padding-top: 48px;
+    padding: 5% 5%;
+  }
+  main.about .facilities__desktop {
+    width: 100%;
+    margin: 0 10%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  main.about .facilities__desktop div {
+    background: rgb(51, 51, 51);
+    padding: 15px;
+  }
+  main.about .facilities__desktop img {
+    align-self: start;
+    justify-self: end;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+  main.about .facilities__mobile {
+    display: none;
   }
   main.about .facilities span {
     margin-bottom: 16px;
   }
   main.about .facilities h2 {
     margin-bottom: 32px;
-  }
-  main.about .facilities__slider-cards {
-    padding: 0px !important;
-    margin: 0px;
-    padding-left: 10%;
-    margin-bottom: 42px;
-  }
-  main.about .facilities__slider-cards__contain {
-    padding: 18px;
-    background-color: rgb(51, 51, 51);
-    margin-bottom: 24px;
-  }
-  main.about .facilities__slider-cards__contain img {
-    margin-bottom: 38px;
-  }
-  main.about .facilities__slider-cards__contain h3 {
-    padding-top: 38px;
-    margin-bottom: 38px;
-  }
-  main.about .facilities__slider-cards__contain p {
-    margin-bottom: 51px;
-    padding-right: 20%;
-  }
-  main.about .facilities__slider-cards__positions {
-    width: 100%;
-    display: flex;
-    place-items: center;
-    text-align: center;
-    justify-content: center;
-    place-content: center;
   }
   main.about .counter {
     padding: 0 5%;
