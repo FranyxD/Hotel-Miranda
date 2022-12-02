@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./main.js" defer></script>
+  <script type="module" src="./js/modules/swipers.js" async></script>
   <title>Hotel Miranda | home</title>
 </head>
 
@@ -52,7 +52,6 @@
       </div>
 
     </div>
-
 
   </header>
 
@@ -140,20 +139,27 @@
           <img src="./assets/svg/nosmoke.svg" alt="no smoke">
           <img src="./assets/svg/drink.svg" alt="drink bar">
         </div>
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+        <!-- Swiper HAND PICKED ROOMS-->
+        <div id="swiperRooms" class="swiper mySwiper-rooms z-0 w-full">
+          <div class="swiper-wrapper w-full">
+            <div class="swiper-slide">
+              <img src="./assets/img/test1.png" alt="">
+            </div>
             <div class="swiper-slide">
               <img src="./assets/img/video.png" alt="">
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">
+              <img src="./assets/img/test1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/test1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/test1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img/test1.png" alt="">
+            </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -161,7 +167,7 @@
         </div>
 
       </div>
-      <div class="rooms-preview__info">
+      <div class="rooms-preview__info z-10">
         <!--INFO ROOM-->
         <div class="rooms-preview__info__contain">
           <h3>Minimal Duplex Room</h3>
@@ -169,10 +175,13 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore.
           </p>
+          <div class="rooms-preview__info__contain__price">
+            <span>$345
+              <small>/Night</small>
+            </span>
+          </div>
         </div>
-        <span>$345
-          <small>/Night</small>
-        </span>
+        
       </div>
 
 
@@ -203,8 +212,8 @@
       <span>FACILITIES</span>
       <h2>Core Features</h2>
 
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
+      <!-- Swiper FACILITIES-->
+      <div class="swiper mySwiper facilities__mobile">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="facilities__slider-cards">
@@ -265,6 +274,52 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
+
+      <section class="facilities__desktop">
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+        <div class="facilities__slider-cards">
+          <img src="./assets/svg/01.svg" alt="01">
+          <img src="./assets/svg/likeFeatures.svg" alt="like features">
+          <h3>Have High Rating</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna..</p>
+        </div>
+      </section>
+
       <img class="facilities__slider-cards__dona" src="./assets/svg/dona.svg" alt="dona">
     </section>
 
@@ -278,7 +333,8 @@
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <!-- 1 slide -->
+          <div class="swiper-slide flex flex-col gap-5">
             <!--FOOD 1-->
             <div class="food-menu__slide">
               <article class="preview-food food-menu__slide__card">
@@ -312,7 +368,8 @@
               </div>
             </article>
           </div>
-            <div class="swiper-slide">
+          <!-- 2 slide -->
+            <div class="swiper-slide flex flex-col gap-5">
               <!--FOOD 1-->
             <div class="food-menu__slide">
               <article class="preview-food food-menu__slide__card">
@@ -449,13 +506,6 @@
   </footer>
 
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    
-  </script>
 </body>
 
 </html>
