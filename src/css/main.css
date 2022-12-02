@@ -480,7 +480,7 @@ small {
   background-color: white;
 }
 
-@media screen and (max-width: 834px) {
+@media screen and screen and (max-width: 834px) {
   header {
     width: 100%;
     height: 75px;
@@ -544,6 +544,33 @@ small {
   header .nav_logo-hotel span {
     line-height: 1;
     place-items: center;
+  }
+  header .nav nav.navegacion {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    background-color: white;
+    z-index: -1 !important;
+    padding: 16px;
+    top: -200px;
+    position: absolute;
+    transition: all 300ms linear;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav nav.navegacion ul {
+    z-index: -1 !important;
+    display: block;
+  }
+  header .nav nav.navegacion ul li {
+    margin: 16px 0;
+    font-family: "Archivo";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 1.5px;
+  }
+  header .nav .activeNav {
+    top: 75px !important;
   }
   header .nav nav.navegacion {
     width: 100%;
