@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="Hotel Miranda" content="Hotel, alquila y reserva habitaciones">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
 
@@ -37,10 +38,10 @@
       <!-- NAV LIST -->
       <nav class="navegacion">
         <ul>
-          <li>About Us</li>
-          <li>Rooms</li>
-          <li>Offers</li>
-          <li>Contact</li>
+          <li><a href="./about.html">offers</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -139,9 +140,25 @@
           <img src="./assets/svg/nosmoke.svg" alt="no smoke">
           <img src="./assets/svg/drink.svg" alt="drink bar">
         </div>
-        <img class="rooms-preview_slider_image" src="./assets/img/video.png" alt="" />
-        <button class="arrow-left rooms-preview_slider_left"></button>
-        <button class="arrow-right rooms-preview_slider_right"></button>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/img/video.png" alt="">
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
 
       </div>
       <div class="rooms-preview__info">
