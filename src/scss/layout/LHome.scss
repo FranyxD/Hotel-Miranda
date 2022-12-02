@@ -103,15 +103,14 @@
                 align-items: center;
                 justify-items: center;
                 align-content: center;
-                
-
+                width: 100%;
                 &_card {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    padding: 0;
                     margin-bottom: 60px;
                     &_image {
-                        padding: 0 2.5%;
                         width: 100%;
                     }
                     &_calendar {
@@ -144,6 +143,16 @@
                     align-items: center;
                     margin-bottom: 20px;
                     width: 100%;
+                    img.iconsMenu {
+                        width: 15px !important;
+                        height: 15px !important;
+                        display: inline-flex;
+                        margin: 0 10px;
+                        z-index: 4; 
+                        background: none;
+                        position: absolute;
+                            top: -5%;
+                    }
                         &_menu {
                             padding: 15px 26px;
                             height: 40px;
@@ -152,30 +161,16 @@
                             justify-content: center;
                             align-items: center;                            gap: 20px;
                             @include shadow(normal);
-                            position: absolute;
-                            top: -5%;
+                            
                             img {
                                 @include size(15px, 15px);
                             }
                         }
 
-                        &_image {
+                        img {
                             width: 100%;
                         }
-                        &_left {
-                            @include arrow(left, black);
-                            z-index: 8;
-                            position: absolute;
-                            right: 0px;
-                            top: 50%;
-                        }
-                        &_right {
-                            @include arrow(right, black);
-                            z-index: 8;
-                            position: absolute;
-                            left: 0px;
-                            top: 50%;
-                        }
+                        
                     
                 }
                 &__info {

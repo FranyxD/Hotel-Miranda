@@ -480,7 +480,7 @@ small {
   background-color: white;
 }
 
-@media screen and screen and (max-width: 834px) {
+@media screen and (max-width: 834px) {
   header {
     width: 100%;
     height: 75px;
@@ -544,33 +544,6 @@ small {
   header .nav_logo-hotel span {
     line-height: 1;
     place-items: center;
-  }
-  header .nav nav.navegacion {
-    width: 100%;
-    opacity: 1;
-    display: block;
-    background-color: white;
-    z-index: -1 !important;
-    padding: 16px;
-    top: -200px;
-    position: absolute;
-    transition: all 300ms linear;
-    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  }
-  header .nav nav.navegacion ul {
-    z-index: -1 !important;
-    display: block;
-  }
-  header .nav nav.navegacion ul li {
-    margin: 16px 0;
-    font-family: "Archivo";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 17px;
-    letter-spacing: 1.5px;
-  }
-  header .nav .activeNav {
-    top: 75px !important;
   }
   header .nav nav.navegacion {
     width: 100%;
@@ -1133,15 +1106,16 @@ small {
     align-items: center;
     justify-items: center;
     align-content: center;
+    width: 100%;
   }
   .home main .rooms-preview_card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
     margin-bottom: 60px;
   }
   .home main .rooms-preview_card_image {
-    padding: 0 2.5%;
     width: 100%;
   }
   .home main .rooms-preview_card_calendar {
@@ -1173,6 +1147,16 @@ small {
     margin-bottom: 20px;
     width: 100%;
   }
+  .home main .rooms-preview_slider img.iconsMenu {
+    width: 15px !important;
+    height: 15px !important;
+    display: inline-flex;
+    margin: 0 10px;
+    z-index: 4;
+    background: none;
+    position: absolute;
+    top: -5%;
+  }
   .home main .rooms-preview_slider_menu {
     padding: 15px 26px;
     height: 40px;
@@ -1182,37 +1166,13 @@ small {
     align-items: center;
     gap: 20px;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: -5%;
   }
   .home main .rooms-preview_slider_menu img {
     width: 15px;
     height: 15px;
   }
-  .home main .rooms-preview_slider_image {
+  .home main .rooms-preview_slider img {
     width: 100%;
-  }
-  .home main .rooms-preview_slider_left {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(-45deg);
-    z-index: 8;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-  }
-  .home main .rooms-preview_slider_right {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(135deg);
-    z-index: 8;
-    position: absolute;
-    left: 0px;
-    top: 50%;
   }
   .home main .rooms-preview__info {
     text-align: center;

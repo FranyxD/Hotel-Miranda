@@ -22,6 +22,14 @@ let swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+const arrIcon = [
+    "./assets/svg/bed.svg",
+    "./assets/svg/drive.svg",
+    "./assets/svg/cold.svg",
+    "./assets/svg/lift.svg",
+    "./assets/svg/nosmoke.svg",
+    "./assets/svg/drink.svg"
+];
 let swiper2 = new Swiper(".mySwiper-rooms", {
     slidesPerView: checkerWidth(),
     spaceBetween: 30,
@@ -31,6 +39,9 @@ let swiper2 = new Swiper(".mySwiper-rooms", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+            return '<img src="' + arrIcon[index] + '"class="' + className + ' iconsMenu">';
+        },
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -43,3 +54,21 @@ window.addEventListener("resize", (event) => {
     //slider centrado infinito
     swiper2.params.slidesPerView = checkerWidth();
 });
+let swiper3 = new Swiper(".swiperMenu", {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+});
+/**
+ * <img src="./assets/svg/bed.svg" alt="bed">
+        <img src="./assets/svg/ethernet.svg" alt="ethernet-wifi">
+        <img src="./assets/svg/drive.svg" alt="drive car">
+        <img src="./assets/svg/cold.svg" alt="cold">
+        <img src="./assets/svg/lift.svg" alt="lift gym">
+        <img src="./assets/svg/nosmoke.svg" alt="no smoke">
+        <img src="./assets/svg/drink.svg" alt="drink bar">
+ */ 
