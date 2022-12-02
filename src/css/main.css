@@ -480,18 +480,19 @@ small {
   background-color: white;
 }
 
-@media (max-width: 834px) {
+@media screen and (max-width: 834px) {
   header {
     width: 100%;
     height: 75px;
     margin: 0 !important;
     padding: 0 !important;
     position: fixed;
-    background-color: white;
     z-index: 10;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   }
   header .nav {
+    z-index: 20 !important;
+    background-color: white;
     width: full;
     height: auto;
     width: 100%;
@@ -544,6 +545,33 @@ small {
     line-height: 1;
     place-items: center;
   }
+  header .nav nav.navegacion {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    background-color: white;
+    z-index: -1 !important;
+    padding: 16px;
+    top: -200px;
+    position: absolute;
+    transition: all 300ms linear;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav nav.navegacion ul {
+    z-index: -1 !important;
+    display: block;
+  }
+  header .nav nav.navegacion ul li {
+    margin: 16px 0;
+    font-family: "Archivo";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 1.5px;
+  }
+  header .nav .activeNav {
+    top: 75px !important;
+  }
   header .nav_icons {
     justify-self: right;
     text-align: right;
@@ -560,28 +588,6 @@ small {
     top: 75px;
   }
 }
-nav.navegacion {
-  width: 100%;
-  display: none;
-  background-color: white;
-  padding: 16px;
-}
-nav.navegacion ul {
-  display: block;
-}
-nav.navegacion ul li {
-  margin: 16px 0;
-  font-family: "Archivo";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-  letter-spacing: 1.5px;
-}
-
-.activeNav {
-  display: block !important;
-}
-
 @media (min-width: 834px) {
   header {
     display: flex;
