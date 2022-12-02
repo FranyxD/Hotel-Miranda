@@ -81,7 +81,7 @@
 @media(min-width: 834px) {
     header{
         display: flex;
-        @include size(100%, 120px);
+        @include size(100%, 100px);
         margin: 40px 0 !important;
         padding: 0 !important;
         position: fixed;

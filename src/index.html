@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="Hotel Miranda" content="Hotel, alquila y reserva habitaciones">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
   <script type="module" src="./js/modules/swipers.js" async></script>
@@ -181,7 +182,7 @@
             </span>
           </div>
         </div>
-        
+
       </div>
 
 
@@ -330,10 +331,46 @@
       <h2>Our Foods Menu</h2>
 
       <!--LIST OF FOODS-->
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
+      <!-- Swiper mobile-->
+      <div class="swiper mySwiper food-menu__mobile">
         <div class="swiper-wrapper">
           <!-- 1 slide -->
+          <div class="swiper-slide flex flex-col gap-5">
+            <!--FOOD 1-->
+            <div class="food-menu__slide">
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <!--FOOD 2-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Tea or Coffe</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+              <!--FOOD 3-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide__card__text">
+                  <h4>Chia Oatmeal</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- 2 slide -->
           <div class="swiper-slide flex flex-col gap-5">
             <!--FOOD 1-->
             <div class="food-menu__slide">
@@ -368,9 +405,17 @@
               </div>
             </article>
           </div>
-          <!-- 2 slide -->
-            <div class="swiper-slide flex flex-col gap-5">
-              <!--FOOD 1-->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <!-- Swipet desktop -->
+      <div class="swiper mySwiper food-menu__desktop">
+        <div class="swiper-wrapper">
+          <!-- 1 slide -->
+          <div class="swiper-slide flex flex-col gap-5">
+            <!--FOOD 1-->
             <div class="food-menu__slide">
               <article class="preview-food food-menu__slide__card">
                 <div class="food-menu_slide__card__image">
@@ -381,33 +426,137 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
                 </div>
               </article>
-            </div>
-            <!--FOOD 2-->
-            <article class="preview-food food-menu__slide__card">
-              <div class="food-menu_slide__card__image">
-                <img src="./assets/img/Rectangle.png" alt="">
-              </div>
-              <div class="food-menu_slide___card__text">
-                <h4>Tea or Coffe</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
-              </div>
-            </article>
-            <!--FOOD 3-->
-            <article class="preview-food food-menu__slide__card">
-              <div class="food-menu_slide__card__image">
-                <img src="./assets/img/Rectangle.png" alt="">
-              </div>
-              <div class="food-menu_slide__card__text">
-                <h4>Chia Oatmeal</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
-              </div>
-            </article>
+
+              <!--FOOD 2-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Tea or Coffe</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+              <!--FOOD 3-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide__card__text">
+                  <h4>Chia Oatmeal</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <!--FOOD 2-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Tea or Coffe</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+              <!--FOOD 3-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide__card__text">
+                  <h4>Chia Oatmeal</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
+          <!-- 2 slide -->
+          <div class="swiper-slide flex flex-col gap-5">
+            <!--FOOD 1-->
+            <div class="food-menu__slide">
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <!--FOOD 2-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Tea or Coffe</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+              <!--FOOD 3-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide__card__text">
+                  <h4>Chia Oatmeal</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Eggs & Bacon</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+
+              <!--FOOD 2-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide___card__text">
+                  <h4>Tea or Coffe</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+              <!--FOOD 3-->
+              <article class="preview-food food-menu__slide__card">
+                <div class="food-menu_slide__card__image">
+                  <img src="./assets/img/Rectangle.png" alt="">
+                </div>
+                <div class="food-menu_slide__card__text">
+                  <h4>Chia Oatmeal</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        </div>
-        </div>
+      </div>
+
+      <div class="food-menu__images">
+        <img src="./assets/img/Rectangle.png" alt="">
+        <img src="./assets/img/Rectangle.png" alt="">
+        <img src="./assets/img/Rectangle.png" alt="">
+      </div>
     </section>
 
     <!--RECORDS-->
@@ -438,21 +587,23 @@
   <!--FOOTER-->
   <footer>
     <!--LOGO H-->
-    <div class="logo">
-      <div class="logo__contain">
-        <span>H</span>
+    <section>
+      <div class="logo">
+        <div class="logo__contain">
+          <span>H</span>
+        </div>
+        <img src="./assets/svg/logo-title.svg" class="img">
       </div>
-      <img src="./assets/svg/logo-title.svg" class="img">
-    </div>
-    <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
-    <div class="social-media">
-      <img src="assets/svg/facebook.svg" alt="facebook">
-      <img src="./assets/svg/twitter.svg" alt="twitter">
-      <img src="./assets/svg/Be.svg" alt="Be">
-      <img src="./assets/svg/linkedin.svg" alt="linkedin">
-      <img src="./assets/svg/youtube.svg" alt="youtube">
-    </div>
+      <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+      <div class="social-media">
+        <img src="assets/svg/facebook.svg" alt="facebook">
+        <img src="./assets/svg/twitter.svg" alt="twitter">
+        <img src="./assets/svg/Be.svg" alt="Be">
+        <img src="./assets/svg/linkedin.svg" alt="linkedin">
+        <img src="./assets/svg/youtube.svg" alt="youtube">
+      </div>
+    </section>
 
     <!--FOOTER SERVICES-->
     <section class="list">
