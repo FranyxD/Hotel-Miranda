@@ -3,6 +3,8 @@
 
         .offer {
             padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
            
             &__photo {
                 position: relative;
