@@ -2623,10 +2623,11 @@ small {
   }
 }
 @media (max-width: 834px) {
+  main.offers .desktop {
+    display: none;
+  }
   main.offers .offer {
     padding: 0 5%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
   main.offers .offer__photo {
     position: relative;
@@ -2635,14 +2636,14 @@ small {
   main.offers .offer__photo img {
     width: 100%;
   }
-  main.offers .offer__photo__fakePrice {
+  main.offers .offer__photo__prices__fakePrice {
     position: absolute;
     right: 5%;
     bottom: 20%;
     font-size: 23px;
     color: rgb(189, 173, 144) !important;
   }
-  main.offers .offer__photo__truePrice {
+  main.offers .offer__photo__prices__truePrice {
     color: red !important;
     font-size: 30px;
     position: absolute;
@@ -2665,40 +2666,60 @@ small {
   }
 }
 @media (min-width: 834px) {
+  main.offers .mobile {
+    display: none;
+  }
   main.offers .offer {
-    padding: 0 5%;
+    margin-top: 5%;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "photo photo" "info price" "description list";
   }
   main.offers .offer__photo {
+    grid-area: photo;
     position: relative;
     margin-bottom: 16px;
+    width: 100%;
   }
   main.offers .offer__photo img {
     width: 100%;
   }
-  main.offers .offer__photo__fakePrice {
-    position: absolute;
+  main.offers .offer__prices {
+    grid-area: price;
+  }
+  main.offers .offer__prices__fakePrice {
     right: 5%;
     bottom: 20%;
     font-size: 23px;
     color: rgb(189, 173, 144) !important;
   }
-  main.offers .offer__photo__truePrice {
+  main.offers .offer__prices__truePrice {
     color: red !important;
     font-size: 30px;
-    position: absolute;
     right: 5%;
     bottom: 5%;
   }
-  main.offers .offer span {
+  main.offers .offer__info {
+    grid-area: info;
+  }
+  main.offers .offer__info span {
     color: #777777;
     margin-bottom: 12px;
   }
-  main.offers .offer h2 {
+  main.offers .offer__info h2 {
     margin-top: 12px;
     margin-bottom: 16px;
   }
-  main.offers .offer p {
+  main.offers .offer__description {
+    grid-area: description;
+  }
+  main.offers .offer__description p {
     margin-bottom: 24px;
+  }
+  main.offers .offer__list {
+    grid-area: list;
   }
   main.offers .offer__list__ul {
     margin-bottom: 25px;
