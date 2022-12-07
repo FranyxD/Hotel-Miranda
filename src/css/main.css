@@ -2673,9 +2673,10 @@ small {
     margin-top: 5%;
     padding: 0 10%;
     display: grid;
+    row-gap: 5%;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
     grid-template-areas: "photo photo" "info price" "description list";
+    place-items: start;
   }
   main.offers .offer__photo {
     grid-area: photo;
@@ -2688,6 +2689,7 @@ small {
   }
   main.offers .offer__prices {
     grid-area: price;
+    align-self: center;
   }
   main.offers .offer__prices__fakePrice {
     right: 5%;
@@ -2710,12 +2712,12 @@ small {
   }
   main.offers .offer__info h2 {
     margin-top: 12px;
-    margin-bottom: 16px;
   }
   main.offers .offer__description {
     grid-area: description;
   }
   main.offers .offer__description p {
+    place-self: start;
     margin-bottom: 24px;
   }
   main.offers .offer__list {
