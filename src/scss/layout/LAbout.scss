@@ -233,12 +233,15 @@
                         color: black;
                     }
                 }
-                &_video {  
-
+                &__video {  
+                    @include flex-column();
+                    place-content: center;
                     @include size(full);
+                    
                     &__play {
                         margin-bottom: 36px;
                         width: 100%;
+                        max-width: 1300px;
                         @include size(100%, 400px);
                     }
                     p {
@@ -382,18 +385,9 @@
                        cursor: pointer;
                     }
                 }
-                &__carousel {
-                    margin-bottom: 120px;
-                    img {
-                        width: 100%;
-                        margin-bottom: 16px;
-                    }
-                    &__controles {
-                        width: 100%;
-                        display: flex;
-                        gap: 7px;
-                        place-content: center;
-                    }
+                .w-full {
+                    width: 100% !important;
+                    height: 100% !important;
                 }
             }
         }

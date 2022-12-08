@@ -233,7 +233,9 @@
                     display: none;
                 }
                 &__mobile {
+                    margin-top: 24px !important;
                     margin-bottom: 120px;
+                    @include size(100%, 400px)
                 }
                 span {
                     text-align: center;
@@ -242,6 +244,7 @@
                 }
                 h3 {
                     margin-top: 24px !important;
+                    
                     text-align: center;
                 }
                 &__slider-cards {

@@ -19,46 +19,46 @@
     <!--NAV-->
     <header>
 
-        <div class="nav">
-    
-          <div class="nav_menu">
-            <!-- BURGER ICON-->
-            <div id="burger" class="nav_menu_burger">
-              <div class="nav_menu_burger_line-1"></div>
-              <div class="nav_menu_burger_line-2"></div>
-              <div class="nav_menu_burger_line-3"></div>
-            </div>
-    
-            <!-- HOTEL LOGO -->
-            <div class="nav_logo-hotel">
-              <div class="nav_logo-hotel_logo">
-                <img class="H" src="./assets/svg/H.svg" alt="H">
-              </div>
-              <img class="title" src="./assets/svg/logo-title.svg" alt="hotel-miranda">
-            </div>
+      <div class="nav">
+  
+        <div class="nav_menu">
+          <!-- BURGER ICON-->
+          <div id="burger" class="nav_menu_burger">
+            <div class="nav_menu_burger_line-1"></div>
+            <div class="nav_menu_burger_line-2"></div>
+            <div class="nav_menu_burger_line-3"></div>
           </div>
-    
-          <!-- NAV LIST -->
-          <nav id="navegation" class="navegacion">
-            <ul>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./rooms.html">Rooms</a></li>
-              <li><a href="./offers.html">Offers</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-          </nav>
-    
-          <!-- ICONS RIGHT -->
-          <div class="nav_icons">
-            <img src="./assets/svg/profile.svg" alt="profile-icon" />
-            <img src="./assets/svg/search.svg" alt="search-icon" />
-          </div>
-          
-          
-    
+  
+          <!-- HOTEL LOGO -->
+          <a href="./index.html" class="nav_logo-hotel">
+            <div class="nav_logo-hotel_logo">
+              <img class="H" src="./assets/svg/H.svg" alt="H">
+            </div>
+            <img class="title" src="./assets/svg/logo-title.svg" alt="hotel-miranda">
+          </a>
+        </div>
+  
+        <!-- NAV LIST -->
+        <nav id="navegation" class="navegacion">
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./rooms.html">Rooms</a></li>
+            <li><a href="./offers.html">Offers</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+  
+        <!-- ICONS RIGHT -->
+        <div class="nav_icons">
+          <img src="./assets/svg/profile.svg" alt="profile-icon" />
+          <img src="./assets/svg/search.svg" alt="search-icon" />
         </div>
         
-      </header>
+        
+  
+      </div>
+      
+    </header>
     
 
 
@@ -77,8 +77,8 @@
             </article>
 
             <!--video-->
-            <article class="about-us_video">
-                <iframe class="about-us_video__play" src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?start=25&end=75"
+            <article class="about-us__video">
+                <iframe class="about-us__video__play" src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?start=25&end=75"
           title="Hotel Miranda in Bayahibe Dom. Rep. 4K" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
@@ -128,7 +128,7 @@
             <h2>Core Features</h2>
 
 
-             <!-- Swiper FACILITIES-->
+             <!-- Swiper FACILITIES mobile-->
       <div class="swiper mySwiper facilities__mobile">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -191,6 +191,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
+      <!-- Swiper FACILITIES desktop -->
       <section class="facilities__desktop">
         <div class="facilities__slider-cards">
           <img src="./assets/svg/01.svg" alt="01">
@@ -268,84 +269,89 @@
             </div>
 
             <!-- CAROUSEL -->
-            <div class="counter__carousel">
-                <img src="./assets/img/video.png" alt="">
-                <div class="counter__carousel__controles">
-                    <input type="radio"><input type="radio">
-                </div>
+            <div class="swiper mySwiper ">
+              <div class="swiper-wrapper ">
+                <div class="swiper-slide"><img class="w-full" src="./assets/img/video.png" alt=""></div>
+                <div class="swiper-slide"><img class="w-full" src="./assets/img/video.png" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
             </div>
         </section>
     </main>
 
     <!--FOOTER-->
-    <footer>
-        <!--LOGO H-->
-        <div class="logo">
-            <div class="logo__contain">
-                <span>H</span>
-            </div>
-            <img src="./assets/svg/logo-title.svg" class="img">
+  <footer>
+    <!--LOGO H-->
+    <section>
+      <div class="logo">
+        <div class="logo__contain">
+          <span>H</span>
         </div>
-        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
-        <div class="social-media">
-            <img src="assets/svg/facebook.svg" alt="facebook">
-            <img src="./assets/svg/twitter.svg" alt="twitter">
-            <img src="./assets/svg/Be.svg" alt="Be">
-            <img src="./assets/svg/linkedin.svg" alt="linkedin">
-            <img src="./assets/svg/youtube.svg" alt="youtube">
+        <img src="./assets/svg/logo-title.svg" class="img">
+      </div>
+      <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+      <div class="social-media">
+        <img src="assets/svg/facebook.svg" alt="facebook">
+        <img src="./assets/svg/twitter.svg" alt="twitter">
+        <img src="./assets/svg/Be.svg" alt="Be">
+        <img src="./assets/svg/linkedin.svg" alt="linkedin">
+        <img src="./assets/svg/youtube.svg" alt="youtube">
+      </div>
+    </section>
+
+    <!--FOOTER SERVICES-->
+    <section class="list">
+      <h4>Services</h4>
+      <ul class="list__ul">
+        <li>+ Resturent & Bar</li>
+        <li>+ Swimming Pool</li>
+        <li>+ Wellness & Spa</li>
+        <li>+ Restaurant</li>
+        <li>+ Conference Room</li>
+        <li>+ Coctail Party House</li>
+        <li>+ Gaming Zone</li>
+        <li>+ Marriage Party</li>
+        <li>+ Party Planning</li>
+        <li>+ Tour Consultancy</li>
+      </ul>
+    </section>
+
+    <!--Contact US-->
+    <section class="contact">
+      <h4>Contact Us</h4>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
         </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
+        </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
+        </div>
+      </div>
+    </section>
 
-        <!--FOOTER SERVICES-->
-        <section class="list">
-            <h4>Services</h4>
-            <ul class="list__ul">
-                <li>+ Resturent & Bar</li>
-                <li>+ Swimming Pool</li>
-                <li>+ Wellness & Spa</li>
-                <li>+ Restaurant</li>
-                <li>+ Conference Room</li>
-                <li>+ Coctail Party House</li>
-                <li>+ Gaming Zone</li>
-                <li>+ Marriage Party</li>
-                <li>+ Party Planning</li>
-                <li>+ Tour Consultancy</li>
-            </ul>
-        </section>
-
-        <!--Contact US-->
-        <section class="contact">
-            <h4>Contact Us</h4>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/tel.svg" class="left contact_phone_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/mail.svg" class="left contact_mail_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-        </section>
-
-        <!--POLITICS AND RULES-->
-        <section class="normatives">
-            <a>Copyright By@Example - 2020</a>
-            <a>Terms of use<span>   |   </span></a>
-            <a>Privacy Enviromental Policy</a>
-        </section>
-    </footer>
+    <!--POLITICS AND RULES-->
+    <section class="normatives">
+      <a>Copyright By@Example - 2020</a>
+      <a>Terms of use<span> | </span></a>
+      <a>Privacy Enviromental Policy</a>
+    </section>
+  </footer>
 </body>
 
 </html>

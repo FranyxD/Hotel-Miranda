@@ -878,6 +878,12 @@ small {
     color: #222222;
   }
 }
+footer {
+  padding-top: 30px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .button {
   background: rgb(189, 173, 144);
   color: white;
@@ -1319,7 +1325,10 @@ small {
     display: none;
   }
   .home main .facilities__mobile {
+    margin-top: 24px !important;
     margin-bottom: 120px;
+    width: 100%;
+    height: 400px;
   }
   .home main .facilities span {
     text-align: center;
@@ -2067,19 +2076,26 @@ small {
     padding: 30px;
     color: black;
   }
-  main.about .about-us_video {
+  main.about .about-us__video {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    place-content: center;
     width: full;
     height: auto;
     width: 100%;
     height: 100%;
   }
-  main.about .about-us_video__play {
+  main.about .about-us__video__play {
     margin-bottom: 36px;
     width: 100%;
+    max-width: 1300px;
     width: 100%;
     height: 400px;
   }
-  main.about .about-us_video p {
+  main.about .about-us__video p {
     font-family: "Old Standard TT";
     font-size: 32px;
     font-weight: 400;
@@ -2219,18 +2235,9 @@ small {
   main.about .counter__records__arrow {
     cursor: pointer;
   }
-  main.about .counter__carousel {
-    margin-bottom: 120px;
-  }
-  main.about .counter__carousel img {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  main.about .counter__carousel__controles {
-    width: 100%;
-    display: flex;
-    gap: 7px;
-    place-content: center;
+  main.about .counter .w-full {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 @media (max-width: 834px) {
@@ -2798,11 +2805,12 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.contact-page section {
-    padding: 0 5%;
-  }
   main.contact-page .contact-info {
+    padding: 10%;
     margin-bottom: 70px;
+    display: flex;
+    place-content: center;
+    gap: 15%;
   }
   main.contact-page .contact-info__card {
     display: flex;
@@ -2826,7 +2834,6 @@ small {
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0px;
-    color: #777777;
   }
   main.contact-page .contact-info__card__back {
     position: absolute;
@@ -2837,6 +2844,10 @@ small {
     height: auto;
     width: 100%;
     height: 100%;
+    opacity: 0.2;
+  }
+  main.contact-page .contact-form {
+    padding: 0 15%;
   }
   main.contact-page .contact-form__form__portada {
     width: 100%;
@@ -2844,14 +2855,16 @@ small {
   }
   main.contact-page .contact-form__form fieldset {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "name phone" "email subject" "desc desc" "buttonForm buttonForm";
   }
   main.contact-page .contact-form__form fieldset label {
     padding: 22px;
     background-color: rgb(249, 249, 249);
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     width: 100%;
     margin-bottom: 30px;
@@ -2863,12 +2876,28 @@ small {
     background-color: rgb(249, 249, 249);
     font-weight: 400;
   }
-  main.contact-page .contact-form__form fieldset button {
+  main.contact-page .contact-form__form fieldset textarea {
+    grid-column: 1/3;
+  }
+  main.contact-page .contact-form__form fieldset .name {
+    grid-area: name;
+  }
+  main.contact-page .contact-form__form fieldset .phone {
+    grid-area: phone;
+  }
+  main.contact-page .contact-form__form fieldset .email {
+    grid-area: email;
+  }
+  main.contact-page .contact-form__form fieldset .subject {
+    grid-area: subject;
+  }
+  main.contact-page .contact-form__form fieldset .desc {
+    grid-area: desc;
+  }
+  main.contact-page .contact-form__form fieldset .buttonForm {
+    grid-area: buttonForm;
     margin: 0 auto;
   }
-}
-body {
-  background-color: #3d3d3d;
 }
 
 /*# sourceMappingURL=main.css.map */
