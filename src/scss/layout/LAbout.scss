@@ -104,6 +104,12 @@
             place-items: center;
             margin-bottom: 60px;
             padding-top: 48px;
+            &__desktop {
+                display: none;
+            }
+            &__mobile {
+
+            }
             span {
                 margin-bottom: 16px;
             }
@@ -197,14 +203,16 @@
 
 @media (min-width: 834px) {
         main.about {
+            .about-us > * {padding: 0 10% !important;}
             .about-us {
-                padding: 0 5%;
+                
                 &__first {
+                    
+                    border-top: 100px solid $myBlack;
+                    padding-top: 178px;
                     background-color: $myGrey;
                     color: white;
-                    padding-top: 75px;
-                    padding-left: 5%;
-                    margin-bottom: 60px;
+                    margin-bottom: 5%;
                     h1 {
                         margin-right: 118px;
                         margin-bottom: 40px;
@@ -225,11 +233,16 @@
                         color: black;
                     }
                 }
-                &_video {
+                &__video {  
+                    @include flex-column();
+                    place-content: center;
+                    @include size(full);
                     
-                    &_play {
+                    &__play {
                         margin-bottom: 36px;
                         width: 100%;
+                        max-width: 1300px;
+                        @include size(100%, 400px);
                     }
                     p {
                         font-family: "Old Standard TT";
@@ -244,7 +257,6 @@
                 }
                 &_box-services {
                     display: flex;
-                    flex-wrap: wrap;
                     gap: 20px;
                     align-items: center;
                     place-items: center;
@@ -272,9 +284,14 @@
             .restaurant{
                 margin-top: 71px;
                 padding: 0 5%;
+                display:grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 20px;
+                grid-template-rows: 1fr;
                 &__image {
                     margin-bottom: 32px;
                     width: 100%;
+                    height: 420px;
                 }
                 span {
                     margin-bottom: 26px;
@@ -293,50 +310,44 @@
             .facilities {
                 background-color: $myBlack;
                 color: white;
-                padding: 0 5%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 place-content: center;
                 place-items: center;
                 margin-bottom: 60px;
-                padding-top: 48px;
+                padding: 5% 5%;
+                &__desktop {
+                    width: 100%;
+                margin: 0 10%;
+                display: grid;
+                place-content: center;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px;
+                margin-bottom: 80px;
+                text-align: center;
+                div {
+                    background: $myGrey;
+                    padding: 15px;
+                }
+                img {
+                    align-self: start;
+                    justify-self: end;
+                    @include size(100px, 100px);
+                    margin: 0;
+                }
+                }
+                &__mobile {
+                    display: none;
+                }
                 span {
                     margin-bottom: 16px;
                 }
                 h2 {
                     margin-bottom: 32px;
                 }
-                &__slider-cards {
-                    padding: 0px !important;
-                    margin: 0px;
-                    padding-left: 10%;
-                    margin-bottom: 42px;
-                    &__contain {
-                        padding: 18px;
-                        background-color: $myGrey;
-                        margin-bottom: 24px;
-                        img {
-                            margin-bottom: 38px;
-                        }
-                        h3 {
-                            padding-top: 38px;
-                            margin-bottom: 38px;
-                        }
-                        p {
-                            margin-bottom: 51px;
-                            padding-right: 20%;   
-                        }
-                    }
-                    &__positions {
-                        width: 100%;
-                        display: flex;
-                        place-items: center;
-                        text-align: center;
-                        justify-content: center;
-                        place-content: center;
-                    }
-                }
+               
+                
             }
             .counter {
                 padding: 0 5%;
@@ -374,18 +385,9 @@
                        cursor: pointer;
                     }
                 }
-                &__carousel {
-                    margin-bottom: 120px;
-                    img {
-                        width: 100%;
-                        margin-bottom: 16px;
-                    }
-                    &__controles {
-                        width: 100%;
-                        display: flex;
-                        gap: 7px;
-                        place-content: center;
-                    }
+                .w-full {
+                    width: 100% !important;
+                    height: 100% !important;
                 }
             }
         }

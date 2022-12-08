@@ -5,7 +5,7 @@
   "author": "Francisco Fuertes Valls",
   "scripts": {
     "sass": "sass --watch src/scss/main.scss:src/css/main.css",
-    "ts": "tsc"
+    "ts": "tsc --watch"
   },
   "devDependencies": {
     "sass": "^1.56.1",
