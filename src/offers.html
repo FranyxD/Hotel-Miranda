@@ -5,52 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- ARCHIVOS JAVASCRIPT -->
+    <script type="module" src="./js/modules/swipers.js" async></script>
+    <script src="./js/main.js" async></script>
     <title>Hotel Miranda | offers</title>
 
 </head>
 
 <body>
-    <!-- NAV -->
+    <!--NAV-->
     <header>
 
-        <div class="nav">
-
-            <div class="nav_menu">
-                <!-- BURGER ICON-->
-                <div class="nav_menu_burger">
-                    <div class="nav_menu_burger_line-1"></div>
-                    <div class="nav_menu_burger_line-2"></div>
-                    <div class="nav_menu_burger_line-3"></div>
-                </div>
-
-                <!-- HOTEL LOGO -->
-                <div class="nav_logo-hotel">
-                    <div class="nav_logo-hotel_logo">
-                        <img src="./assets/svg/H.svg" alt="H">
-                    </div>
-                    <img src="./assets/svg/logo-title.svg" alt="hotel-miranda">
-                </div>
+      <div class="nav">
+  
+        <div class="nav_menu">
+          <!-- BURGER ICON-->
+          <div id="burger" class="nav_menu_burger">
+            <div class="nav_menu_burger_line-1"></div>
+            <div class="nav_menu_burger_line-2"></div>
+            <div class="nav_menu_burger_line-3"></div>
+          </div>
+  
+          <!-- HOTEL LOGO -->
+          <a href="./index.html" class="nav_logo-hotel">
+            <div class="nav_logo-hotel_logo">
+              <img class="H" src="./assets/svg/H.svg" alt="H">
             </div>
-
-            <!-- ICONS RIGHT -->
-            <div class="nav_icons">
-                <img src="./assets/svg/profile.svg" alt="profile-icon" />
-                <img src="./assets/svg/search.svg" alt="search-icon" />
-            </div>
-
+            <img class="title" src="./assets/svg/logo-title.svg" alt="hotel-miranda">
+          </a>
         </div>
-
+  
         <!-- NAV LIST -->
-        <nav>
-            <ul>
-                <li>About Us</li>
-                <li>Rooms</li>
-                <li>Offers</li>
-                <li>Contact</li>
-            </ul>
+        <nav id="navegation" class="navegacion">
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./rooms.html">Rooms</a></li>
+            <li><a href="./offers.html">Offers</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
         </nav>
+  
+        <!-- ICONS RIGHT -->
+        <div class="nav_icons">
+          <img src="./assets/svg/profile.svg" alt="profile-icon" />
+          <img src="./assets/svg/search.svg" alt="search-icon" />
+        </div>
+        
+        
+  
+      </div>
+      
     </header>
 
     <main class="offers">
@@ -59,11 +66,11 @@
             <section class="first">
                 <h1>THE ULTIMATE LUXURY</h1>
                 <h2>Ultimate Room</h2>
-                <div class="first__ha">
-                    <a>Home</a>
-                    <span> | </span>
-                    <a>Rooms Details</a>
-                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Offers</a></li>
+                    </ul>
                 </nav>
             </section>
 
@@ -71,19 +78,36 @@
             <section class="offer">
                 <div class="offer__photo">
                     <img src="./assets/img/rect.png" alt="">
-                    <span class="offer__photo__fakePrice">$500/<small>Night</small></span>
-                    <span class="offer__photo__truePrice">$345/<small>Night</small></span>
+                    <div class="mobile offer__photo__prices">
+                        <span
+                            class="offer__photo__prices__fakePrice"><strike>$500/</strike><small><strike>Night</strike></small></span>
+                        <span class="offer__photo__prices__truePrice">$345/<small>Night</small></span>
+                    </div>
                 </div>
 
-                <span>DOUBLE BED</span>
-                <h2>Luxury Double Bed</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum
-                    dolore
-                    eu fugiat nulla pariatur.</p>
+                <div class="offer__info">
+                    <span>DOUBLE BED</span>
+                    <h2>Luxury Double Bed</h2>
+                </div>
+
+                <div class="offer__description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum
+                        dolore
+                        eu fugiat nulla pariatur.</p>
+                    <button class="desktop button">Book now</button>
+                </div>
+
+
+                <div class="desktop offer__prices">
+                    <span
+                        class="offer__prices__fakePrice"><strike>$500/</strike><small><strike>Night</strike></small></span>
+                    <span class="offer__prices__truePrice">$345/<small>Night</small></span>
+                </div>
 
                 <!-- Amentities -->
                 <article class="amentities offer__list">
@@ -103,83 +127,84 @@
                         <li><img src="./assets/svg/strong-locker.svg" alt="strong locker">Strong Locker</li>
                         <li><img src="./assets/svg/expert-team.svg" alt="expert team">Expert Team</li>
                     </ul>
-                    <button class="button">Book Now</button>
+                    <button class="mobile button">Book Now</button>
                 </article>
-                
+
             </section>
 
     </main>
 
     <!--FOOTER-->
-    <footer>
-        <!--LOGO H-->
-        <div class="logo">
-            <div class="logo__contain">
-                <span>H</span>
-            </div>
-            <img src="./assets/svg/logo-title.svg" class="img">
+  <footer>
+    <!--LOGO H-->
+    <section>
+      <div class="logo">
+        <div class="logo__contain">
+          <span>H</span>
         </div>
-        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
-        <div class="social-media">
-            <img src="assets/svg/facebook.svg" alt="facebook">
-            <img src="./assets/svg/twitter.svg" alt="twitter">
-            <img src="./assets/svg/Be.svg" alt="Be">
-            <img src="./assets/svg/linkedin.svg" alt="linkedin">
-            <img src="./assets/svg/youtube.svg" alt="youtube">
+        <img src="./assets/svg/logo-title.svg" class="img">
+      </div>
+      <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.</p>
+      <div class="social-media">
+        <img src="assets/svg/facebook.svg" alt="facebook">
+        <img src="./assets/svg/twitter.svg" alt="twitter">
+        <img src="./assets/svg/Be.svg" alt="Be">
+        <img src="./assets/svg/linkedin.svg" alt="linkedin">
+        <img src="./assets/svg/youtube.svg" alt="youtube">
+      </div>
+    </section>
+
+    <!--FOOTER SERVICES-->
+    <section class="list">
+      <h4>Services</h4>
+      <ul class="list__ul">
+        <li>+ Resturent & Bar</li>
+        <li>+ Swimming Pool</li>
+        <li>+ Wellness & Spa</li>
+        <li>+ Restaurant</li>
+        <li>+ Conference Room</li>
+        <li>+ Coctail Party House</li>
+        <li>+ Gaming Zone</li>
+        <li>+ Marriage Party</li>
+        <li>+ Party Planning</li>
+        <li>+ Tour Consultancy</li>
+      </ul>
+    </section>
+
+    <!--Contact US-->
+    <section class="contact">
+      <h4>Contact Us</h4>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/tel.svg" class="left contact_phone_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
         </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/mail.svg" class="left contact_mail_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
+        </div>
+      </div>
+      <div class="contact-list contact__card">
+        <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
+        <div class="contact__card__text">
+          <h5>Phone Number</h5>
+          <span>+34 123 456 789</span>
+        </div>
+      </div>
+    </section>
 
-        <!--FOOTER SERVICES-->
-        <section class="list">
-            <h4>Services</h4>
-            <ul class="list__ul">
-                <li>+ Resturent & Bar</li>
-                <li>+ Swimming Pool</li>
-                <li>+ Wellness & Spa</li>
-                <li>+ Restaurant</li>
-                <li>+ Conference Room</li>
-                <li>+ Coctail Party House</li>
-                <li>+ Gaming Zone</li>
-                <li>+ Marriage Party</li>
-                <li>+ Party Planning</li>
-                <li>+ Tour Consultancy</li>
-            </ul>
-            <button class="button">Book Now</button>
-        </section>
-
-        <!--Contact US-->
-        <section class="contact">
-            <h4>Contact Us</h4>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/tel.svg" class="left contact_phone_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/mail.svg" class="left contact_mail_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-            <div class="contact-list contact__card">
-                <img src="./assets/svg/location.svg" alt="" class="left contact_location_left">
-                <div class="contact__card__text">
-                    <h5>Phone Number</h5>
-                    <span>+34 123 456 789</span>
-                </div>
-            </div>
-        </section>
-
-        <!--POLITICS AND RULES-->
-        <section class="normatives">
-            <a>Copyright By@Example - 2020</a>
-            <a>Terms of use<span> | </span></a>
-            <a>Privacy Enviromental Policy</a>
-        </section>
-    </footer>
+    <!--POLITICS AND RULES-->
+    <section class="normatives">
+      <a>Copyright By@Example - 2020</a>
+      <a>Terms of use<span> | </span></a>
+      <a>Privacy Enviromental Policy</a>
+    </section>
+  </footer>
 </body>
 
 </html>

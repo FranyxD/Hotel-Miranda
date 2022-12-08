@@ -480,18 +480,19 @@ small {
   background-color: white;
 }
 
-@media (max-width: 834px) {
+@media screen and (max-width: 834px) {
   header {
     width: 100%;
     height: 75px;
     margin: 0 !important;
     padding: 0 !important;
     position: fixed;
-    background-color: white;
     z-index: 10;
-    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   }
   header .nav {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    z-index: 20 !important;
+    background-color: white;
     width: full;
     height: auto;
     width: 100%;
@@ -501,6 +502,7 @@ small {
     justify-content: space-between;
   }
   header .nav_menu {
+    cursor: pointer;
     margin-left: 20px;
     display: inline-flex;
     gap: 32px;
@@ -543,8 +545,36 @@ small {
     line-height: 1;
     place-items: center;
   }
+  header .nav nav.navegacion {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    background-color: white;
+    z-index: -1 !important;
+    padding: 16px;
+    top: -200px;
+    position: absolute;
+    transition: all 300ms linear;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+  header .nav nav.navegacion ul {
+    z-index: -1 !important;
+    display: block;
+  }
+  header .nav nav.navegacion ul li {
+    margin: 16px 0;
+    font-family: "Archivo";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 1.5px;
+  }
+  header .nav .activeNav {
+    top: 75px !important;
+  }
   header .nav_icons {
     justify-self: right;
+    text-align: right;
     margin-right: 23px;
     display: flex;
     gap: 28px;
@@ -552,9 +582,6 @@ small {
   header .nav_icons img {
     width: 20px;
     height: 20px;
-  }
-  header nav.navegacion {
-    display: none;
   }
   main {
     position: relative;
@@ -565,7 +592,7 @@ small {
   header {
     display: flex;
     width: 100%;
-    height: 120px;
+    height: 80px;
     margin: 40px 0 !important;
     padding: 0 !important;
     position: fixed;
@@ -596,20 +623,20 @@ small {
     gap: 13.5px;
   }
   header .nav_logo-hotel_logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     place-items: center;
     place-content: center;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   }
   header .nav_logo-hotel_logo .H {
-    width: 31px;
-    height: 44px;
+    width: 20px;
+    height: 24px;
   }
   header .nav_logo-hotel .title {
-    width: 137px;
-    height: 56px;
+    width: 90px;
+    height: 40px;
   }
   header .nav_logo-hotel span {
     line-height: 1;
@@ -630,6 +657,13 @@ small {
   header nav.navegacion ul {
     display: inline-flex;
     gap: 30px;
+  }
+  header nav.navegacion ul li {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
   }
 }
 @media (max-width: 834px) {
@@ -732,15 +766,23 @@ small {
 }
 @media (min-width: 834px) {
   footer {
+    padding: 0 5% !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "desc serv cont" "norm norm norm";
+    gap: 5%;
     padding: 0 22px;
   }
-  footer .logo {
+  footer section {
+    grid-area: desc;
+  }
+  footer section .logo {
     display: inline-flex;
     align-items: center;
     place-items: center;
     margin-bottom: 47px;
   }
-  footer .logo__contain {
+  footer section .logo__contain {
     width: 80px;
     height: 80px;
     padding: 10px;
@@ -749,7 +791,7 @@ small {
     align-items: center;
     justify-content: center;
   }
-  footer .logo__contain span {
+  footer section .logo__contain span {
     font-family: "Archivo";
     font-style: normal;
     font-weight: 700;
@@ -757,23 +799,27 @@ small {
     line-height: 43px;
     color: #FFFFFF;
   }
-  footer .logo img {
+  footer section .logo img {
     width: 137px;
     height: 56px;
     margin-left: 28px;
   }
-  footer p {
+  footer section p {
     color: #777777;
     margin-bottom: 40px;
   }
-  footer .social-media {
-    width: 100%;
+  footer section .social-media {
     display: inline-flex;
     gap: 26px;
     place-content: start;
     margin-bottom: 40px;
   }
+  footer section .social-media img {
+    width: 20px;
+    height: 20px;
+  }
   footer .list {
+    grid-area: serv;
     margin-bottom: 32px;
   }
   footer .list h4 {
@@ -783,10 +829,12 @@ small {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 288px;
     gap: 20px;
     color: #777777;
     font-size: 16px;
+  }
+  footer .contact {
+    grid-area: cont;
   }
   footer .contact h4 {
     margin-bottom: 34px;
@@ -813,10 +861,12 @@ small {
     font-weight: 400;
   }
   footer .normatives {
-    display: flex;
+    width: 100%;
+    grid-area: norm;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 5%;
   }
   footer .normatives a {
     font-family: "Roboto";
@@ -828,6 +878,12 @@ small {
     color: #222222;
   }
 }
+footer {
+  padding-top: 30px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .button {
   background: rgb(189, 173, 144);
   color: white;
@@ -844,65 +900,136 @@ small {
   padding: 20px 5%;
 }
 
-.rooms-list__preinfo {
-  position: relative;
-  text-align: center;
+@media (max-width: 834px) {
+  .rooms-list__preinfo {
+    position: relative;
+    text-align: center;
+  }
+  .rooms-list__preinfo__photo {
+    width: 100%;
+    height: 30%;
+  }
+  .rooms-list__preinfo__menu {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-flex;
+    background-color: white;
+    position: absolute;
+    gap: 15px;
+    transform: translateX(-50%);
+    top: 65%;
+  }
+  .rooms-list__preinfo h3 {
+    margin-top: 80px;
+    margin-bottom: 16px;
+  }
+  .rooms-list__preinfo span {
+    color: rgb(189, 173, 144);
+    margin-right: 30px;
+  }
+  .rooms-list__preinfo a {
+    color: #777777;
+    font-family: "Roboto";
+    font-weight: 700;
+  }
 }
-.rooms-list__preinfo__photo {
-  width: 100%;
-  height: 30%;
+@media (min-width: 834px) {
+  .rooms-list__preinfo {
+    position: relative;
+    text-align: center;
+  }
+  .rooms-list__preinfo__photo {
+    position: relative;
+    width: 100%;
+  }
+  .rooms-list__preinfo__photo img {
+    width: 100%;
+  }
+  .rooms-list__preinfo__photo__menu {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-flex;
+    background-color: white;
+    position: absolute;
+    gap: 15px;
+    transform: translateX(-50%);
+    width: fit-content;
+    bottom: -25px;
+  }
+  .rooms-list__preinfo h3 {
+    margin-top: 50px;
+    margin-bottom: 16px;
+  }
+  .rooms-list__preinfo span {
+    color: rgb(189, 173, 144);
+    margin-right: 30px;
+  }
+  .rooms-list__preinfo a {
+    color: #777777;
+    font-family: "Roboto";
+    font-weight: 700;
+  }
 }
-.rooms-list__preinfo__menu {
-  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: inline-flex;
-  background-color: white;
-  position: absolute;
-  gap: 15px;
-  transform: translateX(-50%);
-  top: 65%;
+@media (max-width: 834px) {
+  .first {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding-top: 75px !important;
+    padding: 0 5%;
+    margin-bottom: 60px;
+  }
+  .first h1 {
+    margin-right: 118px;
+    margin-bottom: 40px;
+  }
+  .first h2 {
+    margin-right: 42px;
+    margin-bottom: 40px;
+  }
+  .first button {
+    display: block;
+  }
+  .first .cuadro {
+    background-color: white;
+    color: black !important;
+  }
 }
-.rooms-list__preinfo h3 {
-  margin-top: 80px;
-  margin-bottom: 16px;
+@media (min-width: 834px) {
+  .first {
+    padding: 0 10% !important;
+    border-top: 100px solid rgb(34, 34, 34);
+    padding-top: 178px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+  }
+  .first h1 {
+    margin-right: 118px;
+    margin-bottom: 40px;
+  }
+  .first h2 {
+    margin-right: 42px;
+    margin-bottom: 40px;
+  }
+  .first ul {
+    background-color: white;
+    width: fit-content;
+    padding: 10px 15px 5px 15px;
+  }
+  .first ul li {
+    display: inline-block;
+    width: fit-content;
+    color: black;
+    font-family: "Archivo";
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .first ul li + li:before {
+    content: " | ";
+  }
+  .first button {
+    display: block;
+  }
 }
-.rooms-list__preinfo span {
-  color: rgb(189, 173, 144);
-  margin-right: 30px;
-}
-.rooms-list__preinfo a {
-  color: #777777;
-  font-family: "Roboto";
-  font-weight: 700;
-}
-
-.first {
-  background-color: rgb(51, 51, 51);
-  color: white;
-  padding-top: 75px !important;
-  padding: 0 5%;
-  margin-bottom: 60px;
-}
-.first h1 {
-  margin-right: 118px;
-  margin-bottom: 40px;
-}
-.first h2 {
-  margin-right: 42px;
-  margin-bottom: 40px;
-}
-.first button {
-  display: block;
-}
-.first__ha  {
-  width: 100%;
-  display: flex;
-  place-items: end;
-  background-color: white;
-  padding: 30px;
-  color: black;
-}
-
 .amentities {
   padding: 0 5%;
   margin-bottom: 104px;
@@ -1063,15 +1190,16 @@ small {
     align-items: center;
     justify-items: center;
     align-content: center;
+    width: 100%;
   }
   .home main .rooms-preview_card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
     margin-bottom: 60px;
   }
   .home main .rooms-preview_card_image {
-    padding: 0 2.5%;
     width: 100%;
   }
   .home main .rooms-preview_card_calendar {
@@ -1102,6 +1230,28 @@ small {
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
+    z-index: 5;
+  }
+  .home main .rooms-preview_slider .swiper-pagination {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    top: -15px;
+    z-index: 5 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+    background-color: white;
+    position: absolute;
+  }
+  .home main .rooms-preview_slider img.iconsMenu {
+    background-color: white;
+    width: 15px !important;
+    height: 15px !important;
+    display: inline-flex;
+    margin: 0 10px;
+    z-index: 4;
+    background: none;
   }
   .home main .rooms-preview_slider_menu {
     padding: 15px 26px;
@@ -1112,37 +1262,13 @@ small {
     align-items: center;
     gap: 20px;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: -5%;
   }
   .home main .rooms-preview_slider_menu img {
     width: 15px;
     height: 15px;
   }
-  .home main .rooms-preview_slider_image {
+  .home main .rooms-preview_slider img {
     width: 100%;
-  }
-  .home main .rooms-preview_slider_left {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(-45deg);
-    z-index: 8;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-  }
-  .home main .rooms-preview_slider_right {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(135deg);
-    z-index: 8;
-    position: absolute;
-    left: 0px;
-    top: 50%;
   }
   .home main .rooms-preview__info {
     text-align: center;
@@ -1195,6 +1321,15 @@ small {
     place-items: center;
     align-items: center;
   }
+  .home main .facilities__desktop {
+    display: none;
+  }
+  .home main .facilities__mobile {
+    margin-top: 24px !important;
+    margin-bottom: 120px;
+    width: 100%;
+    height: 400px;
+  }
   .home main .facilities span {
     text-align: center;
     color: #777777;
@@ -1204,6 +1339,9 @@ small {
     margin-top: 24px !important;
     text-align: center;
   }
+  .home main .facilities__slider-cards {
+    margin-bottom: 120px;
+  }
   .home main .facilities__slider-cards img {
     margin-top: 133px;
     margin-bottom: 38px;
@@ -1212,20 +1350,16 @@ small {
     margin-bottom: 28px;
     text-align: left;
   }
-  .home main .facilities__slider-cards__positions {
-    margin-top: 32px;
-    display: inline-flex;
-    place-content: center;
-    gap: 7px;
-    margin-bottom: 179px;
-  }
-  .home main .facilities__slider-cards__dona {
+  .home main .facilities__dona {
     position: absolute;
     right: 0%;
     bottom: 0%;
   }
   .home main .food-menu {
     margin-top: 24px;
+  }
+  .home main .food-menu__desktop {
+    display: none;
   }
   .home main .food-menu span {
     color: #777777;
@@ -1252,46 +1386,17 @@ small {
     width: 120px;
     height: 120px;
   }
-  .home main .food-menu__slide__controls {
-    margin-top: 24px;
-    position: relative;
-    width: full;
-    height: auto;
+  .home main .food-menu__images {
     width: 100%;
-    height: 100%;
-    display: flex;
-    place-content: end;
-    gap: 16px;
-    margin-bottom: 60px;
-  }
-  .home main .food-menu__slide__controls__right {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(135deg);
-    z-index: 8;
-  }
-  .home main .food-menu__slide__controls__left {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(-45deg);
-    z-index: 8;
-  }
-  .home main .food-menu__img-slider {
-    margin-bottom: 60px;
-  }
-  .home main .food-menu__img-slider img {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .home main .food-menu__img-slider__position-photo {
-    display: flex;
-    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: inline-flex;
     place-content: center;
-    gap: 7px;
+    gap: 20px;
+    margin-bottom: 5%;
+  }
+  .home main .food-menu__images img {
+    width: 100%;
   }
   .home main .records {
     display: flex;
@@ -1458,7 +1563,7 @@ small {
     margin-bottom: 38.33px;
   }
   .home .rooms-preview {
-    padding: 0 20% !important;
+    padding: 0 5% !important;
     grid-area: luxury;
     display: flex;
     flex-direction: column;
@@ -1475,6 +1580,7 @@ small {
     padding-bottom: 24px;
   }
   .home .rooms-preview_slider {
+    padding: 0 !important;
     margin-top: 24px;
     position: relative;
     display: flex;
@@ -1530,16 +1636,21 @@ small {
   .home .rooms-preview__info {
     position: relative;
     bottom: 50px;
-    background-color: white;
+    z-index: 4;
     text-align: center;
     margin-bottom: 49px;
-    padding: 30px;
     display: flex;
     align-items: center;
+    place-content: center;
   }
   .home .rooms-preview__info__contain {
+    padding: 30px;
+    background-color: white;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    place-content: center;
+    place-items: center;
   }
   .home .rooms-preview__info__contain h3 {
     margin-bottom: 12px;
@@ -1547,12 +1658,16 @@ small {
   .home .rooms-preview__info__contain p {
     margin-bottom: 16px;
   }
-  .home .rooms-preview__info span {
+  .home .rooms-preview__info__contain__price {
+    float: right;
+  }
+  .home .rooms-preview__info__contain__price span {
+    background-color: white;
     margin-bottom: 42px;
     color: rgb(189, 173, 144);
     font-size: 32px;
   }
-  .home .rooms-preview__info span small {
+  .home .rooms-preview__info__contain__price span small {
     font-size: 12px;
   }
   .home .intro-video {
@@ -1603,12 +1718,34 @@ small {
   }
   .home .facilities {
     position: relative;
-    padding-top: 60px !important;
+    padding: 60px 10% !important;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
     align-items: center;
+  }
+  .home .facilities__mobile {
+    display: none;
+  }
+  .home .facilities__desktop {
+    width: 100%;
+    margin: 0 10%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .home .facilities__desktop img {
+    align-self: start;
+    justify-self: end;
+    width: 100px;
+    height: 100px;
+    margin: 0;
   }
   .home .facilities span {
     text-align: center;
@@ -1627,20 +1764,23 @@ small {
     margin-bottom: 28px;
     text-align: left;
   }
-  .home .facilities__slider-cards__positions {
-    margin-top: 32px;
-    display: inline-flex;
-    place-content: center;
-    gap: 7px;
-    margin-bottom: 179px;
-  }
   .home .facilities__slider-cards__dona {
     position: absolute;
-    right: 0%;
+    left: 0%;
     bottom: 0%;
+    transform: scaleX(-1);
   }
   .home .food-menu {
     margin-top: 24px;
+    padding: 0 15% !important;
+    width: 100%;
+  }
+  .home .food-menu__mobile {
+    display: none;
+  }
+  .home .food-menu__desktop {
+    width: 100%;
+    margin: 0 auto;
   }
   .home .food-menu span {
     color: #777777;
@@ -1651,12 +1791,18 @@ small {
     margin-bottom: 32px;
   }
   .home .food-menu__slide {
+    margin: 0 auto !important;
     display: flex;
     flex-direction: column;
     place-content: center;
     place-items: center;
     align-items: center;
-    gap: 16px;
+    width: 100%;
+    place-content: center;
+    display: grid;
+    column-gap: 50px;
+    row-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
   }
   .home .food-menu__slide__card {
     display: flex;
@@ -1664,56 +1810,26 @@ small {
     gap: 16px;
   }
   .home .food-menu__slide__card__image {
-    width: 120px;
-    height: 120px;
-  }
-  .home .food-menu__slide__controls {
-    margin-top: 24px;
-    position: relative;
     width: full;
     height: auto;
     width: 100%;
     height: 100%;
-    display: flex;
-    place-content: end;
-    gap: 16px;
-    margin-bottom: 60px;
   }
-  .home .food-menu__slide__controls__right {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(135deg);
-    z-index: 8;
+  .home .food-menu__images {
+    margin-top: 5%;
+    padding: 0 20% !important;
+    display: inline-flex;
+    gap: 20px;
+    margin-bottom: 5%;
   }
-  .home .food-menu__slide__controls__left {
-    cursor: pointer;
-    border: solid black;
-    border-width: 0 6px 6px 0px;
-    padding: 10px;
-    transform: rotate(-45deg);
-    z-index: 8;
-  }
-  .home .food-menu__img-slider {
-    margin-bottom: 60px;
-  }
-  .home .food-menu__img-slider img {
+  .home .food-menu__images img {
     width: 100%;
-    margin-bottom: 24px;
-  }
-  .home .food-menu__img-slider__position-photo {
-    display: flex;
-    width: 100%;
-    place-content: center;
-    gap: 7px;
   }
   .home .records {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    gap: 5%;
     place-content: center;
-    place-items: center;
-    align-items: center;
     background-color: rgb(51, 51, 51);
     color: white;
     margin-bottom: 160px;
@@ -1836,6 +1952,9 @@ small {
     margin-bottom: 60px;
     padding-top: 48px;
   }
+  main.about .facilities__desktop {
+    display: none;
+  }
   main.about .facilities span {
     margin-bottom: 16px;
   }
@@ -1928,15 +2047,15 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.about .about-us {
-    padding: 0 5%;
+  main.about .about-us > * {
+    padding: 0 10% !important;
   }
   main.about .about-us__first {
+    border-top: 100px solid rgb(34, 34, 34);
+    padding-top: 178px;
     background-color: rgb(51, 51, 51);
     color: white;
-    padding-top: 75px;
-    padding-left: 5%;
-    margin-bottom: 60px;
+    margin-bottom: 5%;
   }
   main.about .about-us__first h1 {
     margin-right: 118px;
@@ -1957,11 +2076,26 @@ small {
     padding: 30px;
     color: black;
   }
-  main.about .about-us_video_play {
+  main.about .about-us__video {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    place-content: center;
+    width: full;
+    height: auto;
+    width: 100%;
+    height: 100%;
+  }
+  main.about .about-us__video__play {
     margin-bottom: 36px;
     width: 100%;
+    max-width: 1300px;
+    width: 100%;
+    height: 400px;
   }
-  main.about .about-us_video p {
+  main.about .about-us__video p {
     font-family: "Old Standard TT";
     font-size: 32px;
     font-weight: 400;
@@ -1972,7 +2106,6 @@ small {
   }
   main.about .about-us_box-services {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     place-items: center;
@@ -1998,10 +2131,15 @@ small {
   main.about .restaurant {
     margin-top: 71px;
     padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    grid-template-rows: 1fr;
   }
   main.about .restaurant__image {
     margin-bottom: 32px;
     width: 100%;
+    height: 420px;
   }
   main.about .restaurant span {
     margin-bottom: 26px;
@@ -2018,50 +2156,43 @@ small {
   main.about .facilities {
     background-color: rgb(34, 34, 34);
     color: white;
-    padding: 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     place-content: center;
     place-items: center;
     margin-bottom: 60px;
-    padding-top: 48px;
+    padding: 5% 5%;
+  }
+  main.about .facilities__desktop {
+    width: 100%;
+    margin: 0 10%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  main.about .facilities__desktop div {
+    background: rgb(51, 51, 51);
+    padding: 15px;
+  }
+  main.about .facilities__desktop img {
+    align-self: start;
+    justify-self: end;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+  main.about .facilities__mobile {
+    display: none;
   }
   main.about .facilities span {
     margin-bottom: 16px;
   }
   main.about .facilities h2 {
     margin-bottom: 32px;
-  }
-  main.about .facilities__slider-cards {
-    padding: 0px !important;
-    margin: 0px;
-    padding-left: 10%;
-    margin-bottom: 42px;
-  }
-  main.about .facilities__slider-cards__contain {
-    padding: 18px;
-    background-color: rgb(51, 51, 51);
-    margin-bottom: 24px;
-  }
-  main.about .facilities__slider-cards__contain img {
-    margin-bottom: 38px;
-  }
-  main.about .facilities__slider-cards__contain h3 {
-    padding-top: 38px;
-    margin-bottom: 38px;
-  }
-  main.about .facilities__slider-cards__contain p {
-    margin-bottom: 51px;
-    padding-right: 20%;
-  }
-  main.about .facilities__slider-cards__positions {
-    width: 100%;
-    display: flex;
-    place-items: center;
-    text-align: center;
-    justify-content: center;
-    place-content: center;
   }
   main.about .counter {
     padding: 0 5%;
@@ -2104,18 +2235,9 @@ small {
   main.about .counter__records__arrow {
     cursor: pointer;
   }
-  main.about .counter__carousel {
-    margin-bottom: 120px;
-  }
-  main.about .counter__carousel img {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  main.about .counter__carousel__controles {
-    width: 100%;
-    display: flex;
-    gap: 7px;
-    place-content: center;
+  main.about .counter .w-full {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 @media (max-width: 834px) {
@@ -2154,67 +2276,17 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.rooms .about-us__first {
-    background-color: rgb(51, 51, 51);
-    color: white;
-    padding-top: 75px;
-    padding-left: 5%;
-    margin-bottom: 60px;
-  }
-  main.rooms .about-us__first h1 {
-    margin-right: 118px;
-    margin-bottom: 40px;
-  }
-  main.rooms .about-us__first h2 {
-    margin-right: 42px;
-    margin-bottom: 40px;
-  }
-  main.rooms .about-us__first button {
-    display: block;
-  }
-  main.rooms .about-us__first__ha  {
-    width: 100%;
-    display: flex;
-    place-items: end;
-    background-color: white;
-    padding: 30px;
-    color: black;
-  }
   main.rooms .rooms-list {
     padding: 5%;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   footer {
     margin-top: 180px;
   }
 }
 @media (max-width: 834px) {
-  main.room-details .first {
-    background-color: rgb(51, 51, 51);
-    color: white;
-    padding-top: 75px;
-    padding: 0 5%;
-    margin-bottom: 60px;
-  }
-  main.room-details .first h1 {
-    margin-right: 118px;
-    margin-bottom: 40px;
-  }
-  main.room-details .first h2 {
-    margin-right: 42px;
-    margin-bottom: 40px;
-  }
-  main.room-details .first button {
-    display: block;
-  }
-  main.room-details .first__ha  {
-    width: 100%;
-    display: flex;
-    place-items: end;
-    background-color: white;
-    padding: 30px;
-    color: black;
-  }
   main.room-details .info-room {
     padding: 0 5%;
   }
@@ -2257,7 +2329,8 @@ small {
     text-align: center;
     margin-bottom: 36px;
   }
-  main.room-details .info-room fieldset label, main.room-details .info-room fieldset input {
+  main.room-details .info-room fieldset label,
+  main.room-details .info-room fieldset input {
     width: 100%;
   }
   main.room-details .info-room fieldset label {
@@ -2374,53 +2447,50 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.room-details .first {
-    background-color: rgb(51, 51, 51);
-    color: white;
-    padding-top: 75px;
-    padding: 0 5%;
-    margin-bottom: 60px;
-  }
-  main.room-details .first h1 {
-    margin-right: 118px;
-    margin-bottom: 40px;
-  }
-  main.room-details .first h2 {
-    margin-right: 42px;
-    margin-bottom: 40px;
-  }
-  main.room-details .first button {
-    display: block;
-  }
-  main.room-details .first__ha  {
-    width: 100%;
-    display: flex;
-    place-items: end;
-    background-color: white;
-    padding: 30px;
-    color: black;
-  }
   main.room-details .info-room {
-    padding: 0 5%;
+    margin-top: 100px;
+    padding: 0 10%;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 3fr 1fr;
+    gap: 5%;
   }
-  main.room-details .info-room span {
-    color: #777777;
-    margin-bottom: 12px;
+  main.room-details .info-room__preview {
+    position: relative;
   }
-  main.room-details .info-room h2 {
-    margin-bottom: 16px;
-  }
-  main.room-details .info-room__price {
-    color: rgb(189, 173, 144) !important;
-    font-size: 32px;
-  }
-  main.room-details .info-room__price small {
-    color: rgb(189, 173, 144) !important;
-    font-size: 13px;
-  }
-  main.room-details .info-room img {
+  main.room-details .info-room__preview img {
     width: 100%;
     margin-bottom: 49px;
+  }
+  main.room-details .info-room__preview__info {
+    position: absolute;
+    top: -30px;
+    display: grid;
+    grid-template-areas: "span span span" "h2 h2 price";
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+    place-items: center;
+    background-color: white;
+    width: fit-content;
+    padding: 5px 10px;
+  }
+  main.room-details .info-room__preview__info span {
+    justify-self: self-start;
+    grid-area: span;
+    color: #777777;
+  }
+  main.room-details .info-room__preview__info h2 {
+    grid-area: h2;
+    font-size: 32px;
+  }
+  main.room-details .info-room__preview__info__price {
+    grid-area: price;
+    color: rgb(189, 173, 144) !important;
+    font-size: 24px;
+  }
+  main.room-details .info-room__preview__info__price small {
+    color: rgb(189, 173, 144) !important;
+    font-size: 13px;
   }
   main.room-details .info-room fieldset {
     display: flex;
@@ -2432,7 +2502,6 @@ small {
   }
   main.room-details .info-room fieldset legend {
     font-family: "Archivo";
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -2440,34 +2509,34 @@ small {
     letter-spacing: -0.54px;
     color: #222222;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 18px;
   }
-  main.room-details .info-room fieldset label, main.room-details .info-room fieldset input {
+  main.room-details .info-room fieldset label,
+  main.room-details .info-room fieldset input {
     width: 100%;
   }
   main.room-details .info-room fieldset label {
     font-family: "Archivo";
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 15px;
     color: #222222;
-    margin-bottom: 13px;
+    margin-top: 20px;
   }
   main.room-details .info-room fieldset input {
     background-color: rgb(249, 249, 249);
-    padding: 20px 30px;
+    padding: 10px 20px;
   }
   main.room-details .info-room fieldset button {
     font-weight: 400;
-    padding: 23px 48px;
     margin-bottom: 48px;
+    padding: 15px 20px;
+    font-size: 14px;
   }
   main.room-details .info-room p {
     margin-bottom: 60px;
   }
   main.room-details .amentities {
-    padding: 0 5%;
+    padding: 0 10%;
     margin-bottom: 104px;
   }
   main.room-details .amentities h3 {
@@ -2478,15 +2547,14 @@ small {
   }
   main.room-details .amentities__list {
     display: flex;
+    width: 75%;
     flex-direction: column;
-    place-items: start;
-    place-content: space-between;
-    height: 400px;
+    justify-content: space-between;
+    height: 300px;
     flex-wrap: wrap;
     text-align: left;
   }
   main.room-details .amentities__list li {
-    margin: 17px;
     display: flex;
     font-family: "Roboto";
     font-style: normal;
@@ -2496,19 +2564,20 @@ small {
     color: #777777;
   }
   main.room-details .founder {
-    padding: 0 5%;
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    place-items: center;
-    align-items: center;
+    margin: 0 10%;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    width: 30%;
     margin-bottom: 104px;
+    text-align: center;
+    padding: 15px;
   }
   main.room-details .founder__photo {
+    margin: 0 auto;
     margin-bottom: 38px;
   }
   main.room-details .founder__photo img {
     border-radius: 100%;
+    margin: 0 auto;
   }
   main.room-details .founder__photo__her {
     width: 150px;
@@ -2527,7 +2596,7 @@ small {
     text-align: center;
   }
   main.room-details .cancelation {
-    padding: 0 5%;
+    margin: 0 15%;
     display: flex;
     flex-direction: column;
     margin-bottom: 101px;
@@ -2544,8 +2613,6 @@ small {
   }
   main.room-details .related-rooms {
     padding: 0 5%;
-    display: flex;
-    flex-direction: column;
   }
   main.room-details .related-rooms h3 {
     margin-bottom: 13px;
@@ -2554,11 +2621,18 @@ small {
     margin-bottom: 32px;
     color: #777777;
   }
-  main.room-details .related-rooms .related-rooms__preinfo__arrows {
-    width: 100%;
+  main.room-details .related-rooms__grid {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    text-align: center;
   }
 }
 @media (max-width: 834px) {
+  main.offers .desktop {
+    display: none;
+  }
   main.offers .offer {
     padding: 0 5%;
   }
@@ -2569,14 +2643,14 @@ small {
   main.offers .offer__photo img {
     width: 100%;
   }
-  main.offers .offer__photo__fakePrice {
+  main.offers .offer__photo__prices__fakePrice {
     position: absolute;
     right: 5%;
     bottom: 20%;
     font-size: 23px;
     color: rgb(189, 173, 144) !important;
   }
-  main.offers .offer__photo__truePrice {
+  main.offers .offer__photo__prices__truePrice {
     color: red !important;
     font-size: 30px;
     position: absolute;
@@ -2599,40 +2673,62 @@ small {
   }
 }
 @media (min-width: 834px) {
+  main.offers .mobile {
+    display: none;
+  }
   main.offers .offer {
-    padding: 0 5%;
+    margin-top: 5%;
+    padding: 0 10%;
+    display: grid;
+    row-gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "photo photo" "info price" "description list";
+    place-items: start;
   }
   main.offers .offer__photo {
+    grid-area: photo;
     position: relative;
     margin-bottom: 16px;
+    width: 100%;
   }
   main.offers .offer__photo img {
     width: 100%;
   }
-  main.offers .offer__photo__fakePrice {
-    position: absolute;
+  main.offers .offer__prices {
+    grid-area: price;
+    align-self: center;
+  }
+  main.offers .offer__prices__fakePrice {
     right: 5%;
     bottom: 20%;
     font-size: 23px;
     color: rgb(189, 173, 144) !important;
   }
-  main.offers .offer__photo__truePrice {
+  main.offers .offer__prices__truePrice {
     color: red !important;
     font-size: 30px;
-    position: absolute;
     right: 5%;
     bottom: 5%;
   }
-  main.offers .offer span {
+  main.offers .offer__info {
+    grid-area: info;
+  }
+  main.offers .offer__info span {
     color: #777777;
     margin-bottom: 12px;
   }
-  main.offers .offer h2 {
+  main.offers .offer__info h2 {
     margin-top: 12px;
-    margin-bottom: 16px;
   }
-  main.offers .offer p {
+  main.offers .offer__description {
+    grid-area: description;
+  }
+  main.offers .offer__description p {
+    place-self: start;
     margin-bottom: 24px;
+  }
+  main.offers .offer__list {
+    grid-area: list;
   }
   main.offers .offer__list__ul {
     margin-bottom: 25px;
@@ -2709,11 +2805,12 @@ small {
   }
 }
 @media (min-width: 834px) {
-  main.contact-page section {
-    padding: 0 5%;
-  }
   main.contact-page .contact-info {
+    padding: 10%;
     margin-bottom: 70px;
+    display: flex;
+    place-content: center;
+    gap: 15%;
   }
   main.contact-page .contact-info__card {
     display: flex;
@@ -2737,7 +2834,6 @@ small {
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0px;
-    color: #777777;
   }
   main.contact-page .contact-info__card__back {
     position: absolute;
@@ -2748,6 +2844,10 @@ small {
     height: auto;
     width: 100%;
     height: 100%;
+    opacity: 0.2;
+  }
+  main.contact-page .contact-form {
+    padding: 0 15%;
   }
   main.contact-page .contact-form__form__portada {
     width: 100%;
@@ -2755,14 +2855,16 @@ small {
   }
   main.contact-page .contact-form__form fieldset {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "name phone" "email subject" "desc desc" "buttonForm buttonForm";
   }
   main.contact-page .contact-form__form fieldset label {
     padding: 22px;
     background-color: rgb(249, 249, 249);
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     width: 100%;
     margin-bottom: 30px;
@@ -2774,7 +2876,26 @@ small {
     background-color: rgb(249, 249, 249);
     font-weight: 400;
   }
-  main.contact-page .contact-form__form fieldset button {
+  main.contact-page .contact-form__form fieldset textarea {
+    grid-column: 1/3;
+  }
+  main.contact-page .contact-form__form fieldset .name {
+    grid-area: name;
+  }
+  main.contact-page .contact-form__form fieldset .phone {
+    grid-area: phone;
+  }
+  main.contact-page .contact-form__form fieldset .email {
+    grid-area: email;
+  }
+  main.contact-page .contact-form__form fieldset .subject {
+    grid-area: subject;
+  }
+  main.contact-page .contact-form__form fieldset .desc {
+    grid-area: desc;
+  }
+  main.contact-page .contact-form__form fieldset .buttonForm {
+    grid-area: buttonForm;
     margin: 0 auto;
   }
 }
