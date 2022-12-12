@@ -26,7 +26,7 @@ let swiper = new Swiper(".mySwiper", {
   });
 
 
-  const arrIcon = [
+  const arrIcon : string[] = [
     "./assets/svg/bed.svg",
     "./assets/svg/drive.svg",
     "./assets/svg/cold.svg",

@@ -318,7 +318,7 @@
             }
 
             .records {
-                
+                margin-top: 30px;
                 @include flex-column();
                 background-color: $myGrey;
                 color: white;
@@ -685,10 +685,10 @@
             
         }
         .food-menu {
-            margin-top: 24px;
+            margin: 24px 0 !important;
             padding: 0 15% !important;
             width: 100%;
-           
+            padding-bottom: 30px !important;
             &__mobile {
                 display: none;
             }
@@ -737,6 +737,7 @@
         }
 
         .records {
+            padding-top: 30px !important;
             width: 100%;
             display: flex;
             gap: 5%;
