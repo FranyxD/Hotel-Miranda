@@ -1,6 +1,6 @@
 @media (max-width: 834px) {
     footer {
-        padding: 0 22px;
+        padding: 5%;
         .logo {
             display: inline-flex;
             align-items: center;
@@ -96,7 +96,8 @@
 @media (min-width: 834px) {
 
         footer {
-            padding: 0 5% !important;
+
+            padding: 5%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: "desc serv cont"
