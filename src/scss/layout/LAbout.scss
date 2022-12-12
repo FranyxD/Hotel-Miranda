@@ -67,10 +67,15 @@
                     flex-direction: column;
                     gap: 12px;
                     cursor: pointer;
+                   
+                    
                 }
                 &_box:hover{
                     background-color: $gold;
                     color: white;
+                    img {
+                        filter: brightness(0%);
+                    }
                 }
                 
             }
@@ -269,6 +274,9 @@
                     &_box:hover{
                         background-color: $gold;
                         color: white;
+                        img {
+                            filter: brightness(0%);
+                        }
                     }
                     
                 }
