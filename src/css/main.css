@@ -447,7 +447,7 @@ small {
 .home main .check-availability form input {
   color: #686868;
   background: none;
-  border-bottom: 2px solid rgb(189, 173, 144);
+  border-bottom: 2px solid #BDAC8D;
 }
 .home main .discover span {
   color: #777777;
@@ -680,7 +680,7 @@ small {
     width: 80px;
     height: 80px;
     padding: 10px;
-    background-color: rgb(189, 173, 144);
+    background-color: #BDAC8D;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -786,7 +786,7 @@ small {
     width: 80px;
     height: 80px;
     padding: 10px;
-    background-color: rgb(189, 173, 144);
+    background-color: #BDAC8D;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -885,7 +885,7 @@ footer {
 }
 
 .button {
-  background: rgb(189, 173, 144);
+  background: #BDAC8D;
   color: white;
   padding: 20px 5%;
   text-align: center !important;
@@ -928,7 +928,7 @@ footer {
     margin-bottom: 16px;
   }
   .rooms-list__preinfo span {
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     margin-right: 30px;
   }
   .rooms-list__preinfo a {
@@ -965,7 +965,7 @@ footer {
     margin-bottom: 16px;
   }
   .rooms-list__preinfo span {
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     margin-right: 30px;
   }
   .rooms-list__preinfo a {
@@ -1289,7 +1289,7 @@ footer {
   }
   .home main .rooms-preview__info span {
     margin-bottom: 42px;
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     font-size: 32px;
   }
   .home main .rooms-preview__info span small {
@@ -1301,7 +1301,7 @@ footer {
     color: white;
   }
   .home main .intro-video span {
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     padding-top: 64px;
   }
   .home main .intro-video article h2 {
@@ -1406,6 +1406,7 @@ footer {
     width: 100%;
   }
   .home main .records {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -1671,7 +1672,7 @@ footer {
   .home .rooms-preview__info__contain__price span {
     background-color: white;
     margin-bottom: 42px;
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     font-size: 32px;
   }
   .home .rooms-preview__info__contain__price span small {
@@ -1685,7 +1686,7 @@ footer {
     color: white;
   }
   .home .intro-video span {
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
     padding-top: 64px;
   }
   .home .intro-video article {
@@ -1778,9 +1779,10 @@ footer {
     transform: scaleX(-1);
   }
   .home .food-menu {
-    margin-top: 24px;
+    margin: 24px 0 !important;
     padding: 0 15% !important;
     width: 100%;
+    padding-bottom: 30px !important;
   }
   .home .food-menu__mobile {
     display: none;
@@ -1833,6 +1835,7 @@ footer {
     width: 100%;
   }
   .home .records {
+    padding-top: 30px !important;
     width: 100%;
     display: flex;
     gap: 5%;
@@ -1929,8 +1932,11 @@ footer {
     cursor: pointer;
   }
   main.about .about-us_box-services_box:hover {
-    background-color: rgb(189, 173, 144);
+    background-color: #BDAC8D;
     color: white;
+  }
+  main.about .about-us_box-services_box:hover img {
+    filter: brightness(0%);
   }
   main.about .restaurant {
     margin-top: 71px;
@@ -2127,8 +2133,11 @@ footer {
     cursor: pointer;
   }
   main.about .about-us_box-services_box:hover {
-    background-color: rgb(189, 173, 144);
+    background-color: #BDAC8D;
     color: white;
+  }
+  main.about .about-us_box-services_box:hover img {
+    filter: brightness(0%);
   }
   main.about .restaurant {
     margin-top: 71px;
@@ -2300,11 +2309,11 @@ footer {
     margin-bottom: 16px;
   }
   main.room-details .info-room__price {
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
     font-size: 32px;
   }
   main.room-details .info-room__price small {
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
     font-size: 13px;
   }
   main.room-details .info-room img {
@@ -2410,7 +2419,7 @@ footer {
   main.room-details .founder h4 {
     font-family: "Archivo";
     margin-bottom: 25px;
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
   }
   main.room-details .founder p {
     color: #777777;
@@ -2487,11 +2496,11 @@ footer {
   }
   main.room-details .info-room__preview__info__price {
     grid-area: price;
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
     font-size: 24px;
   }
   main.room-details .info-room__preview__info__price small {
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
     font-size: 13px;
   }
   main.room-details .info-room fieldset {
@@ -2591,7 +2600,7 @@ footer {
   main.room-details .founder h4 {
     font-family: "Archivo";
     margin-bottom: 25px;
-    color: rgb(189, 173, 144);
+    color: #BDAC8D;
   }
   main.room-details .founder p {
     color: #777777;
@@ -2650,7 +2659,7 @@ footer {
     right: 5%;
     bottom: 20%;
     font-size: 23px;
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
   }
   main.offers .offer__photo__prices__truePrice {
     color: red !important;
@@ -2704,7 +2713,7 @@ footer {
     right: 5%;
     bottom: 20%;
     font-size: 23px;
-    color: rgb(189, 173, 144) !important;
+    color: #BDAC8D !important;
   }
   main.offers .offer__prices__truePrice {
     color: red !important;
